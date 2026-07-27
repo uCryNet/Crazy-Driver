@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 33efc37e158dab048adffa70486d8470
+timeCreated: 1588118247
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43638936819072054
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Bld_Retainer_Wall_01_Short_Angled_Convex.asset
+  uploadId: 927792

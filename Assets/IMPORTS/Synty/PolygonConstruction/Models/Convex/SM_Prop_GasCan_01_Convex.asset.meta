@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5cc5824f01de770409da6d1335b9b57a
+timeCreated: 1588119047
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43026102666844260
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_GasCan_01_Convex.asset
+  uploadId: 927792

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e721d8554faf2094396653ab4fd4c049
+timeCreated: 1588118990
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43599791292976880
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Wheelbarrow_01_Convex.asset
+  uploadId: 927792

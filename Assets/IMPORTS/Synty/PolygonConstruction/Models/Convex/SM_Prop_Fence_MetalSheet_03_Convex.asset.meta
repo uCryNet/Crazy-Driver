@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d51fa3c1d26301c409a4e9bbce249339
+timeCreated: 1588119108
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43842005184955402
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Fence_MetalSheet_03_Convex.asset
+  uploadId: 927792

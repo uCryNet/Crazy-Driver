@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 23eb7c4557baf7347b9145fc74571a0e
+timeCreated: 1588119168
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43494133174851376
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Scaffold_Stackable_01_Tarp_2_Convex.asset
+  uploadId: 927792

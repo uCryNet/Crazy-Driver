@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bea0b16c2e7846d45a52aa1e3cd810e0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 369986
+  packageName: EasyLine - Spline Mesh Deformer with layer system
+  packageVersion: 1.2
+  assetPath: Assets/IMPORTS/EasyLine/Examples/assets environment/HDRP/Prefabs_HDRP/Pipes_down_2_HDRP.prefab
+  uploadId: 936062

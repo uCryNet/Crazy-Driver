@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 606068791820c9f49b46e946031215fa
+timeCreated: 1588119167
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43507676359337396
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Tire_01_Convex.asset
+  uploadId: 927792

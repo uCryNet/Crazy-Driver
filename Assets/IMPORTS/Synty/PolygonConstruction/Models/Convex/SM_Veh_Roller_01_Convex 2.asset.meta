@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 27c130985b69eab468098badb22231ac
+timeCreated: 1588120361
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43887286783201186
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Veh_Roller_01_Convex
+    2.asset
+  uploadId: 927792

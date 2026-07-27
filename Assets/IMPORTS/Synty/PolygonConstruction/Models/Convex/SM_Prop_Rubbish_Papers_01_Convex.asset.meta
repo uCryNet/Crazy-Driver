@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a1e8cb3b78c03e348bec543a07b4328a
+timeCreated: 1588119153
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43655489777780850
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Rubbish_Papers_01_Convex.asset
+  uploadId: 927792

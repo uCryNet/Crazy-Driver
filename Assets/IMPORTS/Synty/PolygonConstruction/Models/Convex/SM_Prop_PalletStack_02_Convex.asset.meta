@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bf425d5b2d8a86341b750502abe85b85
+timeCreated: 1588118984
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43855765736746992
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_PalletStack_02_Convex.asset
+  uploadId: 927792

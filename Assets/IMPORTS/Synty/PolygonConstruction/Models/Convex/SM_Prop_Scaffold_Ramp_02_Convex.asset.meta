@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b410b96499014aa4ba1c903954a7e758
+timeCreated: 1588119083
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43548266731665190
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Scaffold_Ramp_02_Convex.asset
+  uploadId: 927792

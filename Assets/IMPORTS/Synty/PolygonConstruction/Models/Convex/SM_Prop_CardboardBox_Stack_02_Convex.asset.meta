@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d097befda94758344b0878ea338dcc7d
+timeCreated: 1588119133
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43102628447259868
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_CardboardBox_Stack_02_Convex.asset
+  uploadId: 927792

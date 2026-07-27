@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4f5bdc8338a9f9b42af3f1b32d18429f
+timeCreated: 1588119023
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43264253069314406
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Pipe_Concrete_Huge_02_Convex.asset
+  uploadId: 927792

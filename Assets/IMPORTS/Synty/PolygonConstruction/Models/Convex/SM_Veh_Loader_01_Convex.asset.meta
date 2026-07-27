@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b294597cfe3e6d64390970f05136e730
+timeCreated: 1588120062
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43679383074108992
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Veh_Loader_01_Convex.asset
+  uploadId: 927792

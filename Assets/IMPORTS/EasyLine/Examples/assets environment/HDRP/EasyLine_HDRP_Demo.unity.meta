@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8a40d903f78ac624e9d8f65b8794e7a5
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 369986
+  packageName: EasyLine - Spline Mesh Deformer with layer system
+  packageVersion: 1.2
+  assetPath: Assets/IMPORTS/EasyLine/Examples/assets environment/HDRP/EasyLine_HDRP_Demo.unity
+  uploadId: 936062

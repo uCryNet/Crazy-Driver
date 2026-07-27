@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: d4471adb7aba0294ea10cba771c3ded2
+timeCreated: 1588120235
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43541673356462222
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Veh_Crane_01_Convex
+    8.asset
+  uploadId: 927792

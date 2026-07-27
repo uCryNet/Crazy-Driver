@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f626d6db2965b6c45a83262a93f51294
+timeCreated: 1588119062
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43586774126879892
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Cone_02_Convex.asset
+  uploadId: 927792

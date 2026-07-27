@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 15e76eb9d82934c4cb66391ae017d7a7
+timeCreated: 1588118515
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43036210426038838
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Env_Bone_Ribcage_01_Convex
+    1.asset
+  uploadId: 927792

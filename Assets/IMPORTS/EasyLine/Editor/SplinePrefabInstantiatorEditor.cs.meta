@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: af7d255e578c89c4f9f155876836a3e6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 369986
+  packageName: EasyLine - Spline Mesh Deformer with layer system
+  packageVersion: 1.2
+  assetPath: Assets/IMPORTS/EasyLine/Editor/SplinePrefabInstantiatorEditor.cs
+  uploadId: 936062

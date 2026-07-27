@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6d9f8201c1d603c428c67eba073554d2
+timeCreated: 1588119072
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43173636232700006
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Iron_Sheet_02_Convex.asset
+  uploadId: 927792

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 02ad1ebd7dd82904a9c29edcd721af2b
+timeCreated: 1588119111
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43538945769031218
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Brick_Stack_02_Convex.asset
+  uploadId: 927792

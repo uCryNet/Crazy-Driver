@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 121e7eda440a5f943b84a3052143bc22
+timeCreated: 1588118249
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43640696499144556
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Bld_Retainer_Wall_Stone_01_End_02_Convex.asset
+  uploadId: 927792

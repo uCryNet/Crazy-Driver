@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5cd83134304ae9c4bb50db129a3ba547
+timeCreated: 1588118983
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43921888529474156
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Trestle_Table_01_Convex.asset
+  uploadId: 927792

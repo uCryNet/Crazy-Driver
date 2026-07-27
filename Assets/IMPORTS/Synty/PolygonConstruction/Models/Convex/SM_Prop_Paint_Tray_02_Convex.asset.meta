@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b423f28a14303414998ea2c8b2820861
+timeCreated: 1588119141
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43008172064851766
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Paint_Tray_02_Convex.asset
+  uploadId: 927792

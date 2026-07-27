@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 230e2a49dca53e64c90d6f904959fa06
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 369986
+  packageName: EasyLine - Spline Mesh Deformer with layer system
+  packageVersion: 1.2
+  assetPath: Assets/IMPORTS/EasyLine/Examples/assets environment/URP/Demo/GlobalVolumeProfile.asset
+  uploadId: 936062

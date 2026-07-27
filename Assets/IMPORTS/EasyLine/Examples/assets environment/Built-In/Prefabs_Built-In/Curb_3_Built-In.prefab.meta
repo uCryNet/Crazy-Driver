@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: be21b8767c3a7664187f2308968e2776
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 369986
+  packageName: EasyLine - Spline Mesh Deformer with layer system
+  packageVersion: 1.2
+  assetPath: Assets/IMPORTS/EasyLine/Examples/assets environment/Built-In/Prefabs_Built-In/Curb_3_Built-In.prefab
+  uploadId: 936062

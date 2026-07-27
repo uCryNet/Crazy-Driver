@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cdee80270774a89428c6bb632756b5fa
+timeCreated: 1588119063
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43355531332323162
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Powercable_04_Convex.asset
+  uploadId: 927792

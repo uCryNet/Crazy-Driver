@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f5c62509fd07eb74d9062c2c059754ee
+timeCreated: 1588119158
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43380350399623510
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_BarrelStack_02_Convex.asset
+  uploadId: 927792

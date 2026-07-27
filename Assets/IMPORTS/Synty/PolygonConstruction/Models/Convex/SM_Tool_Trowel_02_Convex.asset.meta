@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cae118dc843c06746b9fb4fa28474895
+timeCreated: 1588118559
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43483806135493440
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Tool_Trowel_02_Convex.asset
+  uploadId: 927792

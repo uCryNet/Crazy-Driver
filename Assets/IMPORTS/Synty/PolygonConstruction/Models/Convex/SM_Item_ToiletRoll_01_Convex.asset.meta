@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e526117e5b8bd3a4eb79c863acba9a77
+timeCreated: 1588118744
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43938123117268680
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Item_ToiletRoll_01_Convex.asset
+  uploadId: 927792

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0cd9ba60af338ee4ea6ff134ca7a786b
+timeCreated: 1588119120
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43663236257308272
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Ladder_Folding_01_Convex.asset
+  uploadId: 927792

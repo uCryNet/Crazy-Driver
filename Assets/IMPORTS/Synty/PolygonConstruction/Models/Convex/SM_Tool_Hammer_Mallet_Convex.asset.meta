@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 224280868e8089b4a93e65c771d0072a
+timeCreated: 1588118557
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43617987397302160
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Tool_Hammer_Mallet_Convex.asset
+  uploadId: 927792

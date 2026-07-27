@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 18c5c6fe885c03345bae6a740e9d6232
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 369986
+  packageName: EasyLine - Spline Mesh Deformer with layer system
+  packageVersion: 1.2
+  assetPath: Assets/IMPORTS/EasyLine/Examples/assets environment/HDRP/EasyLine_HDRP_Demo/SkyandFogSettingsProfile.asset
+  uploadId: 936062

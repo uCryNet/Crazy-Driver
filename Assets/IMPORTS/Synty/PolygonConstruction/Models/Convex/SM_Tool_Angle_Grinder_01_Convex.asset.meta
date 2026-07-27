@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 140739f72b6c78142b1a3c4a4d8b48db
+timeCreated: 1588118556
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43736855155441546
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Tool_Angle_Grinder_01_Convex.asset
+  uploadId: 927792

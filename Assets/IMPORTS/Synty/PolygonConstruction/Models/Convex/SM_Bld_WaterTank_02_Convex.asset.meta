@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 865eaec3b5cf6804e902a10bf6edf67c
+timeCreated: 1588118250
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43859431408280044
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Bld_WaterTank_02_Convex.asset
+  uploadId: 927792

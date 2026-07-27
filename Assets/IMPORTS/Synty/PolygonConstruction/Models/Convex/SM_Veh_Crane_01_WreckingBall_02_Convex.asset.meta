@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 10f7c19147945114ba85026c29a6bc24
+timeCreated: 1588120063
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43996908477691136
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Veh_Crane_01_WreckingBall_02_Convex.asset
+  uploadId: 927792

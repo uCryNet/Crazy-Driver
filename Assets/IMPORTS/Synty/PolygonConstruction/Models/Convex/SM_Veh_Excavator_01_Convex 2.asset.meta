@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 55903e01d7982a747b109e1bea378d46
+timeCreated: 1588120083
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43973822719817990
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Veh_Excavator_01_Convex
+    2.asset
+  uploadId: 927792

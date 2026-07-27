@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 686a7a5571daf9847a35de66cf6b54cb
+timeCreated: 1588119105
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43845132877157654
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_PowerBoxes_01_Convex.asset
+  uploadId: 927792

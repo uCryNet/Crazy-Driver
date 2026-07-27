@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e1c221c94ef28c64286e42a3a31bc106
+timeCreated: 1588118972
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43927736760981038
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Skip_01_Convex.asset
+  uploadId: 927792

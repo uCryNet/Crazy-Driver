@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 21f1d509a11413e448bd0a148f8e984c
+timeCreated: 1588119076
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43859839835624310
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Barricade_01_Convex.asset
+  uploadId: 927792

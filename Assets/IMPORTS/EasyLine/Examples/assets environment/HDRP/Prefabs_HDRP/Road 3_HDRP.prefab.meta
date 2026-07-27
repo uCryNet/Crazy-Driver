@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: be55182c2afc06345bffb1ce2218df55
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 369986
+  packageName: EasyLine - Spline Mesh Deformer with layer system
+  packageVersion: 1.2
+  assetPath: Assets/IMPORTS/EasyLine/Examples/assets environment/HDRP/Prefabs_HDRP/Road
+    3_HDRP.prefab
+  uploadId: 936062

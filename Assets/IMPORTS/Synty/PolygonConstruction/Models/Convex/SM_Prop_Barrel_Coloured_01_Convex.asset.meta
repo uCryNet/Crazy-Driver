@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8d4524f8227f11648823cb85f04371b5
+timeCreated: 1588118978
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43302358701986634
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Barrel_Coloured_01_Convex.asset
+  uploadId: 927792

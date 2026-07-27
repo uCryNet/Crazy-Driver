@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2897a31dbbc7fb047b0771dd86f30636
+timeCreated: 1588119148
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43297833405967896
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Tarp_Generic_02_Convex.asset
+  uploadId: 927792

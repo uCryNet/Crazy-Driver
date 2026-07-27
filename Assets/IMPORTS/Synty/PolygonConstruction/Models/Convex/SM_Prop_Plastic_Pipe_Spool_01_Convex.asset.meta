@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ec2a3c7cb70ecfd4581f51224bbe5f39
+timeCreated: 1588118958
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43410072406537070
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Plastic_Pipe_Spool_01_Convex.asset
+  uploadId: 927792

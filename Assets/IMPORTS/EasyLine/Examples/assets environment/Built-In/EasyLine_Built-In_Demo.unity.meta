@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: aafecc9a7a0c0db468083791de24ed38
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 369986
+  packageName: EasyLine - Spline Mesh Deformer with layer system
+  packageVersion: 1.2
+  assetPath: Assets/IMPORTS/EasyLine/Examples/assets environment/Built-In/EasyLine_Built-In_Demo.unity
+  uploadId: 936062

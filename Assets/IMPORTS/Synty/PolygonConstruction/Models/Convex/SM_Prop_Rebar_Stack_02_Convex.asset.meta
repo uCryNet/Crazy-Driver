@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: adaa024233b19e6449412407f7d76dde
+timeCreated: 1588119034
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43596627769419516
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Rebar_Stack_02_Convex.asset
+  uploadId: 927792

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a2b32cc99ce34ad4dbc20e089c63fc9e
+timeCreated: 1588118750
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43704934546931060
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Item_WalkieTalkie_01_Convex.asset
+  uploadId: 927792

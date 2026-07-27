@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e840d413c48a9874a8566924177755d7
+timeCreated: 1588119078
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43838100396438268
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Sign_11_Convex.asset
+  uploadId: 927792

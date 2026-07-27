@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c64352e6122083548a696a7648f5b908
+timeCreated: 1588119104
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43695605016645996
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Watertank_01_Convex.asset
+  uploadId: 927792

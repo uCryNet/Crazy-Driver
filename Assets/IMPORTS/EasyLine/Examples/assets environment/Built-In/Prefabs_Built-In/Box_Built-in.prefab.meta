@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3ee0c36f6780ec5458a2ee7052176d8d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 369986
+  packageName: EasyLine - Spline Mesh Deformer with layer system
+  packageVersion: 1.2
+  assetPath: Assets/IMPORTS/EasyLine/Examples/assets environment/Built-In/Prefabs_Built-In/Box_Built-in.prefab
+  uploadId: 936062

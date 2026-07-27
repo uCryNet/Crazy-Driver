@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e110f10060aa2464c9a11cdf4a60850f
+timeCreated: 1585088472
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Prefabs/Vehicles/SM_Veh_Mini_Loader_02.prefab
+  uploadId: 927792

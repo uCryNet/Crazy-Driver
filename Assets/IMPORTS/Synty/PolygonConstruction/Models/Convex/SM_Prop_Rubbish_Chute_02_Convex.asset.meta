@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a5aaecd8735344c49a7c5d3bc814adb8
+timeCreated: 1588119127
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43324885684318656
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Rubbish_Chute_02_Convex.asset
+  uploadId: 927792

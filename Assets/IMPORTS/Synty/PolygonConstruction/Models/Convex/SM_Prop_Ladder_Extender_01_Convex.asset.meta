@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3eac76a725bce0348b03c20640fe7048
+timeCreated: 1588119160
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43323874513110354
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Ladder_Extender_01_Convex.asset
+  uploadId: 927792

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 51f8d727b9666ad46bc2fbd9d8fbced1
+timeCreated: 1588119063
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43328736306111646
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Junk_Stack_08_Convex.asset
+  uploadId: 927792

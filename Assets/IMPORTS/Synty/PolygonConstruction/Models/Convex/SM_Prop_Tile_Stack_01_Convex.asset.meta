@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7f56a2bc9f793ba4185d29b034e4f738
+timeCreated: 1588118992
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43065971649766296
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Tile_Stack_01_Convex.asset
+  uploadId: 927792

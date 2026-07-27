@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2bbe866a94bdb7344b180e7190293731
+timeCreated: 1588119190
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43110106020329632
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Traffic_Barrel_02_Convex.asset
+  uploadId: 927792

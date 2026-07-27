@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0c17edded6647754984303517617efdb
+timeCreated: 1588119183
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43995472550342590
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Poster_06_Convex.asset
+  uploadId: 927792

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fd9f3b500737dea44bd25291619c6238
+timeCreated: 1588120064
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43252893175128346
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Veh_Truck_01_DumpTray_01_Convex.asset
+  uploadId: 927792

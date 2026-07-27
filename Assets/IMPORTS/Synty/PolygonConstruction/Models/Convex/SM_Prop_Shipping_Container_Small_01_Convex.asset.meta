@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c32053d7d886ba84fad7482c7a3a5d94
+timeCreated: 1588119046
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43549630402733894
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Shipping_Container_Small_01_Convex.asset
+  uploadId: 927792

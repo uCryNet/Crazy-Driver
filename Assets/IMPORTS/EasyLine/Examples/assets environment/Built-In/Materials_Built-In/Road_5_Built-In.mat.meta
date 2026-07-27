@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 97fc3e24cca07104e8ac34f420fe16ad
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 369986
+  packageName: EasyLine - Spline Mesh Deformer with layer system
+  packageVersion: 1.2
+  assetPath: Assets/IMPORTS/EasyLine/Examples/assets environment/Built-In/Materials_Built-In/Road_5_Built-In.mat
+  uploadId: 936062

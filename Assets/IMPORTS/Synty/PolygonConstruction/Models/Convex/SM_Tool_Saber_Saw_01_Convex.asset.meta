@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 649fccf94c73ffd48a92bb5686982088
+timeCreated: 1588118550
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43741010852065234
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Tool_Saber_Saw_01_Convex.asset
+  uploadId: 927792

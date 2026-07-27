@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f9679d3d6968ef24289618f5f703c2cf
+timeCreated: 1588118541
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43513415037828074
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Tool_Crowbar_01_Convex.asset
+  uploadId: 927792

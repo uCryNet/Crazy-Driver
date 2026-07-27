@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: de7a56100b196924c96157be0239ea26
+timeCreated: 1588118745
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43172853513688444
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Item_Flask_Mug_01_Convex.asset
+  uploadId: 927792

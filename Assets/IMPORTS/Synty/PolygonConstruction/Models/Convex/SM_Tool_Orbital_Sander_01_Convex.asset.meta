@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cf4f42d519126f24bbe3658f14114e38
+timeCreated: 1588118540
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43419850300925700
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Tool_Orbital_Sander_01_Convex.asset
+  uploadId: 927792

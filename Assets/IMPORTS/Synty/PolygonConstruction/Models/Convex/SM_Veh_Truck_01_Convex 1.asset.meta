@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: edf83c0da6a706049a03367dcc4dcac3
+timeCreated: 1588120451
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43200471089896222
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Veh_Truck_01_Convex
+    1.asset
+  uploadId: 927792

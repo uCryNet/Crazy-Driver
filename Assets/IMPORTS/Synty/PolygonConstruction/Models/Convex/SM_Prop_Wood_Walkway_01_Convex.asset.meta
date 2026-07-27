@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: eb20f74c9eb50614bb69369b46fb9058
+timeCreated: 1588119020
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43787967530491848
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Wood_Walkway_01_Convex.asset
+  uploadId: 927792

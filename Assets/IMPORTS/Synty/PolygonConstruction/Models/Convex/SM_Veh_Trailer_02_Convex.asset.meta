@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e6f768c27fbffc04bbcdbaa693f323ce
+timeCreated: 1588120059
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43310246466397130
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Veh_Trailer_02_Convex.asset
+  uploadId: 927792

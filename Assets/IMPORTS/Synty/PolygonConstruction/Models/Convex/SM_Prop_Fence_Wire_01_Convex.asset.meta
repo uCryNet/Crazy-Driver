@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2cf235a4817aaf340bb98a50c7b094b7
+timeCreated: 1588119146
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43267852583818328
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Fence_Wire_01_Convex.asset
+  uploadId: 927792

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8953bbd67ecc955479157f3669049053
+timeCreated: 1588118548
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43345688454506546
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Tool_Handsaw_01_Convex.asset
+  uploadId: 927792

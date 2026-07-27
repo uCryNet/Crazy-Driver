@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 61168d496c3a5d04cacfd8dcba094481
+timeCreated: 1588119026
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43996599704104780
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Paint_Can_Closed_Black_01_Convex.asset
+  uploadId: 927792

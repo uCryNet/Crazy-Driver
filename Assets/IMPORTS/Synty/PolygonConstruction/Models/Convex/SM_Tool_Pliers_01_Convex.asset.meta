@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d583811ef0f57114db12f16908adb751
+timeCreated: 1588118558
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43232720099838990
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Tool_Pliers_01_Convex.asset
+  uploadId: 927792

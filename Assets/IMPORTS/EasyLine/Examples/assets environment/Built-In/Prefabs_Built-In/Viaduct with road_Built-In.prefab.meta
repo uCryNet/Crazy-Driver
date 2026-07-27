@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 13a48919d5f3ed8488b607b3258da570
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 369986
+  packageName: EasyLine - Spline Mesh Deformer with layer system
+  packageVersion: 1.2
+  assetPath: Assets/IMPORTS/EasyLine/Examples/assets environment/Built-In/Prefabs_Built-In/Viaduct
+    with road_Built-In.prefab
+  uploadId: 936062

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 65119bcbca59477419ab1add30f0d531
+timeCreated: 1588118738
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43055234476613832
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Item_SprayCan_01_Convex.asset
+  uploadId: 927792

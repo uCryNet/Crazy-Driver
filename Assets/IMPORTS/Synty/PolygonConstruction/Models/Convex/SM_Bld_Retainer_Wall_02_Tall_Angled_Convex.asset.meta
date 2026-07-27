@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 22c8939d02cbd0a42b0b33a5ebb0d085
+timeCreated: 1588118251
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43201759119927072
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Bld_Retainer_Wall_02_Tall_Angled_Convex.asset
+  uploadId: 927792

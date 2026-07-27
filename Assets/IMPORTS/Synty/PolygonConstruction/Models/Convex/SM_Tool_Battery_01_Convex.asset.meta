@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 428715b9b3fd3764a96fe552c15a55b3
+timeCreated: 1588118549
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43472410965917408
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Tool_Battery_01_Convex.asset
+  uploadId: 927792

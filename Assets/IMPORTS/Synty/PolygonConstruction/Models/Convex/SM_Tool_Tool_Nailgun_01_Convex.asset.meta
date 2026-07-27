@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e9a1ae702f864f146af4dfdf3e800087
+timeCreated: 1588118547
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43650901593430428
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Tool_Tool_Nailgun_01_Convex.asset
+  uploadId: 927792

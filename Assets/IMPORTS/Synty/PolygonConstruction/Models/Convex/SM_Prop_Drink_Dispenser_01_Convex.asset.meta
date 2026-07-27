@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0e9e04bc27672fc48868c5c25d5e6ae1
+timeCreated: 1588119037
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43318477305039224
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Drink_Dispenser_01_Convex.asset
+  uploadId: 927792

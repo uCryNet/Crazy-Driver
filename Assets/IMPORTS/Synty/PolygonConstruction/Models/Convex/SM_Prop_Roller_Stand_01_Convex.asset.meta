@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fcf86d37809d1b6478f3a0fbe2317c91
+timeCreated: 1588118963
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43695715511556950
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Roller_Stand_01_Convex.asset
+  uploadId: 927792

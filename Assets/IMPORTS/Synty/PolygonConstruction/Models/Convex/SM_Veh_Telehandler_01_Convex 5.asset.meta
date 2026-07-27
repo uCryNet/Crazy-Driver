@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 8e24725314a001e4bab46588cc4b4bdb
+timeCreated: 1588120380
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43403761655457162
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Veh_Telehandler_01_Convex
+    5.asset
+  uploadId: 927792

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d3fe8a7efa7d5494586b5625aaf49bbe
+timeCreated: 1588118345
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43589040119568406
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Bld_House_Truss_01_Convex.asset
+  uploadId: 927792

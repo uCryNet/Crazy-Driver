@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e5377617c14cd924ca36325d63a034b4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 369986
+  packageName: EasyLine - Spline Mesh Deformer with layer system
+  packageVersion: 1.2
+  assetPath: Assets/IMPORTS/EasyLine/Examples/assets environment/URP/Prefabs_URP/Pipes_1_URP.prefab
+  uploadId: 936062

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6e8ef0c97bb17d04ea97ed7a34a9c88f
+timeCreated: 1588119179
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43842077751200376
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Floodlights_01_Convex.asset
+  uploadId: 927792

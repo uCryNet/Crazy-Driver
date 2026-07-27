@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9c63dd4b11e4c8749a2c93b825a26419
+timeCreated: 1588118551
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43207368934375086
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Tool_Concrete_Breaker_Jackhammer_01_Convex.asset
+  uploadId: 927792

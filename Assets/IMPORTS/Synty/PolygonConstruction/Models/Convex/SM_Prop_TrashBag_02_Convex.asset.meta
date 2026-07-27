@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c393f5dc65c4a564f816ab36ed6222d2
+timeCreated: 1588119161
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43119735200750310
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_TrashBag_02_Convex.asset
+  uploadId: 927792

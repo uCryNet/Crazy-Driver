@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e61f8ce970b6c7649b011a3125193a92
+timeCreated: 1588120156
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43085750196503454
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Veh_Pickup_01_Canopy_Convex.asset
+  uploadId: 927792

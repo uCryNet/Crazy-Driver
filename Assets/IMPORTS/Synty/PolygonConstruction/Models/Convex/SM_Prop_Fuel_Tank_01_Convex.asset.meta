@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9915f79b6b974cd4e8b8602e7b5e53cb
+timeCreated: 1588119174
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43736994876180736
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Fuel_Tank_01_Convex.asset
+  uploadId: 927792

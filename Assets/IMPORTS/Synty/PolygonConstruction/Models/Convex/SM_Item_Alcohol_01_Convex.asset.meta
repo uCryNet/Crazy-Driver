@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7f9d3a5ec929d8e48b13685a12b4d5d6
+timeCreated: 1588118740
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43313951733226108
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Item_Alcohol_01_Convex.asset
+  uploadId: 927792

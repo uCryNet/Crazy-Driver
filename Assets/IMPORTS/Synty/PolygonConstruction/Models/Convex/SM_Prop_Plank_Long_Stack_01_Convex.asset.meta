@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f5c52f9d9bd82cf45a8849cea59b55a9
+timeCreated: 1588119147
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 43179171519320320
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168036
+  packageName: POLYGON - Construction Pack - Art by Synty
+  packageVersion: 1.5.1
+  assetPath: Assets/Synty/PolygonConstruction/Models/Convex/SM_Prop_Plank_Long_Stack_01_Convex.asset
+  uploadId: 927792
