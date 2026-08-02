@@ -643,7 +643,7 @@ public class SplineDrawTool : EditorTool
 
     private void NotifyDeformers(BezierSpline s)
     {
-        foreach (var d in Object.FindObjectsOfType<SplineMeshDeformer>()) if (d.spline == s && d.autoDeform) d.Deform();
+        foreach (var d in Object.FindObjectsByType<SplineMeshDeformer>()) if (d.spline == s && d.autoDeform) d.Deform();
     }
 
     private void CloseLoop(BezierSpline s)

@@ -38,7 +38,7 @@ public class SplineMeshElement
     public bool flipX = false, flipY = false, flipZ = false;
     [Tooltip("If true, the asset will be stretched along the forward axis to perfectly fill the range from startIndex to endIndex.")]
     public bool stretchToIndexEnds = false;
-    [Tooltip("If 'Simplify Props As Boxes' is enabled globally, should it apply to this specific element?")]
+    [Tooltip("Collider only. Lets the global 'Simplify Props as Boxes' replace this element's prop parts with a plain box in the generated mesh collider. The visible mesh is never affected.")]
     public bool allowBoxSimplification = true;
 
     [HideInInspector] public bool isExpanded = false; // For Inspector UI persistence
@@ -124,8 +124,8 @@ public class SplineMeshDeformer : MonoBehaviour
     [Tooltip("Controls mesh length at curve bends. 0 = no effect (even spacing). Positive values shrink mesh on bends. Negative values stretch mesh on bends.")]
     public float curveBendDensity = 0f;
 
-    [Tooltip("If true, instances will be scaled so that they exactly fit the total length of the curve.")]
-    public bool stretchToFitCurve = false;
+    [Tooltip("Scales the chain so it ends exactly on the end of the curve, leaving no gap and no overshoot. Only road surfaces are stretched - props keep their authored size and are just repositioned. With this on, Segment Count acts as a density control: more segments means each one is shorter.")]
+    public bool stretchToFitCurve = true;
 
     [Tooltip("If true, recreates UVs based on World Space position (useful for seamless textures).")]
     public bool generateWorldSpaceUVs = false;
@@ -246,8 +246,8 @@ public class SplineMeshDeformer : MonoBehaviour
     private GameObject lastCombinedPrefab;
 
     // Pre-deformation subdivision cache (rebuilt fresh on every static rebuild).
-    // Key packs (source mesh instanceID, level); value is an owned, densified mesh copy.
-    [System.NonSerialized] private Dictionary<long, Mesh> subdivCache;
+    // Key is (source mesh, level, forward axis); value is an owned, densified mesh copy.
+    [System.NonSerialized] private Dictionary<(Mesh mesh, int level, Vector3 forward), Mesh> subdivCache;
 
     // Serialization Fields (Hidden data backup for Builds/PlayMode to bypass Read/Write restriction)
     private Vector3[] serVerts, serCollVerts;
@@ -318,6 +318,29 @@ public class SplineMeshDeformer : MonoBehaviour
 
         UnityEditor.EditorApplication.delayCall -= BufferedDeform;
         UnityEditor.EditorApplication.delayCall += BufferedDeform;
+    }
+
+    /// <summary>
+    /// True if any layer carries its own upright/lock-rotation constraint.
+    /// <para>
+    /// The fast animation LUT bakes one rotation per curve position from the *global* locks only
+    /// (see BuildLUT), so it physically cannot represent per-element constraints. Rather than let
+    /// those settings silently stop working once Fast Animation Mode kicks in, we fall back to the
+    /// exact per-vertex path whenever any layer actually needs it. Costs frame time only in the
+    /// scenes that would otherwise render incorrectly.
+    /// </para>
+    /// </summary>
+    private bool HasPerElementRotationOverrides()
+    {
+        if (!useMixedMeshes || mixedMeshes == null) return false;
+
+        for (int i = 0; i < mixedMeshes.Length; i++)
+        {
+            var e = mixedMeshes[i];
+            if (e == null) continue;
+            if (e.forceUpright || e.lockPropX || e.lockPropY || e.lockPropZ) return true;
+        }
+        return false;
     }
 
     public void RecalculateSegmentCountFromMesh(Mesh mesh, Vector3 elementScale)
@@ -548,7 +571,8 @@ public class SplineMeshDeformer : MonoBehaviour
         Vector2[] finalUvs = cachedFinalUvs;
 
         bool isRigid = !deformMesh;
-        bool useFastLUT = Application.isPlaying && animateConveyor && fastAnimationMode && !isRigid;
+        bool useFastLUT = Application.isPlaying && animateConveyor && fastAnimationMode && !isRigid
+                          && !HasPerElementRotationOverrides();
 
         if (useFastLUT && !lutValid) BuildLUT(curveLength, mapper);
 
@@ -612,8 +636,11 @@ public class SplineMeshDeformer : MonoBehaviour
             {
                 var elem = mixedMeshes[eIdx];
                 pOffset = elem.positionOffset;
-                rOffset = elem.rotationOffset; 
-                forceUprightV = elem.forceUpright;
+                rOffset = elem.rotationOffset;
+                // Constraints add up, they never loosen: an element can force upright on top of the
+                // global switch, but a default (false) element must not silently cancel it. This
+                // matches how the rotation locks below are combined.
+                forceUprightV = forcePropsUpright || elem.forceUpright;
                 lockPX = elem.lockPropX; lockPY = elem.lockPropY; lockPZ = elem.lockPropZ;
                 dPropsV = elem.deformProps;
             }
@@ -980,7 +1007,8 @@ public class SplineMeshDeformer : MonoBehaviour
 
         Vector3[] deformedVerts = cachedCollDeformedVerts;
 
-        bool useFastLUT = Application.isPlaying && animateConveyor && fastAnimationMode && deformMesh;
+        bool useFastLUT = Application.isPlaying && animateConveyor && fastAnimationMode && deformMesh
+                          && !HasPerElementRotationOverrides();
         if (useFastLUT && !lutValid) BuildLUT(curveLength, mapper);
 
         for (int i = 0; i < cachedCollFlatVerts.Length; i++)
@@ -1010,8 +1038,9 @@ public class SplineMeshDeformer : MonoBehaviour
             {
                 var elem = mixedMeshes[eIdx];
                 pOffset = elem.positionOffset;
-                rOffset = elem.rotationOffset; 
-                forceUprightC = elem.forceUpright;
+                rOffset = elem.rotationOffset;
+                // Same additive rule as the visual mesh, so collider and geometry stay in sync.
+                forceUprightC = forcePropsUpright || elem.forceUpright;
                 lockPX = elem.lockPropX; lockPY = elem.lockPropY; lockPZ = elem.lockPropZ;
                 dPropsC = elem.deformProps;
             }
@@ -2458,7 +2487,7 @@ public class SplineMeshDeformer : MonoBehaviour
 
     private void ClearSubdivCache()
     {
-        if (subdivCache == null) { subdivCache = new Dictionary<long, Mesh>(); return; }
+        if (subdivCache == null) { subdivCache = new Dictionary<(Mesh, int, Vector3), Mesh>(); return; }
         foreach (var m in subdivCache.Values)
         {
             if (m == null) continue;
@@ -2473,8 +2502,8 @@ public class SplineMeshDeformer : MonoBehaviour
         level = Mathf.Clamp(level, 0, 4);
         if (level <= 0) return src;
 
-        if (subdivCache == null) subdivCache = new Dictionary<long, Mesh>();
-        long key = ((long)(uint)src.GetInstanceID() << 16) | ((long)(uint)level << 8) | (uint)(forwardDir.GetHashCode() & 0xFF);
+        if (subdivCache == null) subdivCache = new Dictionary<(Mesh, int, Vector3), Mesh>();
+        var key = (src, level, forwardDir);
         if (subdivCache.TryGetValue(key, out Mesh cached) && cached != null) return cached;
 
         // Find min and max Z projections of the source mesh to define bounds

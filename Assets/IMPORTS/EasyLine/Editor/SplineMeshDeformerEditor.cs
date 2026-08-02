@@ -10,6 +10,21 @@ public class SplineMeshDeformerEditor : Editor
     private bool showAdvanced = true;
     private HashSet<int> renamingIndices = new HashSet<int>();
 
+    // Segments a freshly added element covers when the range cannot be derived from the spline
+    // (Segment Count still 0). Without this a new element lands on a dead 0..0 range.
+    private const int DefaultElementSpan = 6;
+
+    // Forward Axis is drawn as a segmented selector instead of a dropdown: it is the setting users
+    // reach for most often here, and six buttons read faster than an enum popup. The declaration
+    // order of ForwardAxis is { Z, X, Y, NegativeZ, NegativeX, NegativeY }, which is not the order
+    // we want to show, so tabs map onto enum indices explicitly.
+    private static readonly GUIContent[] AxisTabs =
+    {
+        new GUIContent("X"), new GUIContent("Y"), new GUIContent("Z"),
+        new GUIContent("-X"), new GUIContent("-Y"), new GUIContent("-Z")
+    };
+    private static readonly int[] AxisTabToEnum = { 1, 2, 0, 4, 5, 3 };
+
     // Serialized properties for conditional visibility
     SerializedProperty splineProp, sourceModeProp, sourceMeshProp, sourcePrefabProp, materialsProp;
     SerializedProperty useMixedMeshesProp, mixedMeshesProp;
@@ -78,10 +93,10 @@ public class SplineMeshDeformerEditor : Editor
         SplineMeshDeformer deformer = (SplineMeshDeformer)target;
 
         // --- TITLE ---
-        DrawHeader("EasyLine Spline Deformer", new Color(0.2f, 0.6f, 1f, 0.2f));
-        
+        DrawHeader("EasyLine Spline Deformer", EasyLineEditorUI.Title);
+
         // --- 1. CURVE SETUP ---
-        DrawSectionHeader("📍 Curve Setup", new Color(0.3f, 1f, 0.4f, 0.15f));
+        DrawSectionHeader("Curve Setup", EasyLineEditorUI.Curve);
         EditorGUILayout.PropertyField(splineProp, new GUIContent("Spline Path", splineProp.tooltip));
         if (splineProp.objectReferenceValue == null)
         {
@@ -109,12 +124,12 @@ public class SplineMeshDeformerEditor : Editor
             EditorGUILayout.Space(5);
             
             // Helpful note for the user instead of a full settings block
-            EditorGUILayout.HelpBox("💡 Mixed Mode Active: Every segment is defined by the list above.", MessageType.None);
+            EditorGUILayout.HelpBox("Mixed Mode Active: Every segment is defined by the list above.", MessageType.None);
         }
         else
         {
             // --- MESH SOURCE ---
-            DrawSectionHeader("📦 Mesh Source", new Color(1f, 0.7f, 0.2f, 0.15f));
+            DrawSectionHeader("Mesh Source", EasyLineEditorUI.Source);
             
             EditorGUILayout.PropertyField(sourceModeProp, new GUIContent("Source Mode", sourceModeProp.tooltip));
             EditorGUILayout.Space(2);
@@ -235,9 +250,9 @@ public class SplineMeshDeformerEditor : Editor
         EditorGUILayout.Space(5);
 
         // --- 3. ARRAY SETTINGS ---
-        DrawSectionHeader("📐 Array Settings", new Color(0.8f, 0.4f, 1f, 0.15f));
+        DrawSectionHeader("Array Settings", EasyLineEditorUI.Array);
         segmentCountProp.intValue = EditorGUILayout.DelayedIntField(new GUIContent("Segment Count", segmentCountProp.tooltip), segmentCountProp.intValue);
-        EditorGUILayout.PropertyField(forwardAxisProp, new GUIContent("Forward Axis", forwardAxisProp.tooltip));
+        DrawForwardAxisField();
         EditorGUILayout.PropertyField(overlapOffsetProp, new GUIContent("Overlap Offset", overlapOffsetProp.tooltip));
         EditorGUILayout.PropertyField(meshScaleProp, new GUIContent("Mesh Scale", meshScaleProp.tooltip));
         bool oldDeform = deformMeshProp.boolValue;
@@ -251,7 +266,7 @@ public class SplineMeshDeformerEditor : Editor
 
         // --- 4. ADVANCED OPTIONS ---
         GUI.backgroundColor = new Color(0.7f, 0.7f, 0.7f, 0.3f);
-        showAdvanced = EditorGUILayout.BeginFoldoutHeaderGroup(showAdvanced, "⚙ Advanced Options");
+        showAdvanced = EditorGUILayout.BeginFoldoutHeaderGroup(showAdvanced, "Advanced Options");
         GUI.backgroundColor = Color.white;
         
         if (showAdvanced)
@@ -347,10 +362,10 @@ public class SplineMeshDeformerEditor : Editor
 
         // --- BOTTOM TOOLS ---
         EditorGUILayout.BeginHorizontal();
-        EditorGUILayout.PropertyField(autoDeformProp, new GUIContent("🔄 Auto Live", autoDeformProp.tooltip));
-        
+        EditorGUILayout.PropertyField(autoDeformProp, new GUIContent("Auto Live", autoDeformProp.tooltip));
+
         GUI.backgroundColor = new Color(0.3f, 0.8f, 1f);
-        if (GUILayout.Button("▶  Deform Now", GUILayout.Height(24)))
+        if (GUILayout.Button("Deform Now", GUILayout.Height(24)))
         {
             Undo.RecordObject(deformer.gameObject, "Deform Mesh");
             deformer.Deform();
@@ -359,17 +374,17 @@ public class SplineMeshDeformerEditor : Editor
         EditorGUILayout.EndHorizontal();
 
         EditorGUILayout.Space(5);
-        DrawSectionHeader("🚀 Export & Baking", new Color(1f, 0.2f, 0.5f, 0.15f));
-        
+        DrawSectionHeader("Export & Baking", EasyLineEditorUI.Export);
+
         EditorGUILayout.BeginHorizontal();
         GUI.backgroundColor = new Color(1f, 0.5f, 0.2f);
-        if (GUILayout.Button("📦 Bake to Prefab", GUILayout.Height(30)))
+        if (GUILayout.Button("Bake to Prefab", GUILayout.Height(30)))
         {
             deformer.BakeToPrefab();
         }
 
         GUI.backgroundColor = new Color(0.7f, 0.9f, 0.3f);
-        if (GUILayout.Button("💾 Export to OBJ", GUILayout.Height(30)))
+        if (GUILayout.Button("Export to OBJ", GUILayout.Height(30)))
         {
             deformer.ExportToOBJ();
         }
@@ -387,30 +402,36 @@ public class SplineMeshDeformerEditor : Editor
         }
     }
 
-    private void DrawHeader(string text, Color color)
+    private void DrawHeader(string text, Color accent)
     {
-        Rect rect = GUILayoutUtility.GetRect(0, 30, GUILayout.ExpandWidth(true));
-        GUI.backgroundColor = color;
-        GUI.Box(rect, "", EditorStyles.helpBox);
-        GUI.backgroundColor = Color.white;
-        
-        GUIStyle style = new GUIStyle(EditorStyles.boldLabel);
-        style.alignment = TextAnchor.MiddleCenter;
-        style.fontSize = 14;
-        style.normal.textColor = EditorGUIUtility.isProSkin ? Color.white : Color.black;
-        GUI.Label(rect, text, style);
+        EasyLineEditorUI.TitleBar(text, accent);
     }
 
-    private void DrawSectionHeader(string text, Color color)
+    private void DrawSectionHeader(string text, Color accent)
     {
-        Rect rect = GUILayoutUtility.GetRect(0, 20, GUILayout.ExpandWidth(true));
-        EditorGUI.DrawRect(rect, color);
-        
-        GUIStyle style = new GUIStyle(EditorStyles.label);
-        style.fontStyle = FontStyle.Bold;
-        style.normal.textColor = EditorGUIUtility.isProSkin ? new Color(0.9f, 0.9f, 0.9f) : Color.black;
-        style.padding.left = 5;
-        GUI.Label(rect, text, style);
+        EasyLineEditorUI.SectionHeader(text, accent);
+    }
+
+    // Forward Axis gets a card of its own: picking the wrong axis is the single most common reason
+    // a mesh comes out mangled, so it should not sit anonymously among the other rows.
+    private void DrawForwardAxisField()
+    {
+        EasyLineEditorUI.BeginHighlightCard(EasyLineEditorUI.Array);
+
+        EditorGUILayout.LabelField(new GUIContent("Forward Axis", forwardAxisProp.tooltip), EditorStyles.boldLabel);
+
+        int tab = System.Array.IndexOf(AxisTabToEnum, forwardAxisProp.enumValueIndex);
+        if (tab < 0) tab = 0;
+
+        EditorGUI.showMixedValue = forwardAxisProp.hasMultipleDifferentValues;
+        EditorGUI.BeginChangeCheck();
+        int newTab = GUILayout.Toolbar(tab, AxisTabs, GUILayout.Height(22));
+        if (EditorGUI.EndChangeCheck()) forwardAxisProp.enumValueIndex = AxisTabToEnum[newTab];
+        EditorGUI.showMixedValue = false;
+
+        EditorGUILayout.LabelField("Local axis of the source mesh that runs along the spline.", EditorStyles.miniLabel);
+
+        EasyLineEditorUI.EndHighlightCard();
     }
 
     private void DrawMixedMeshesList(SplineMeshDeformer deformer)
@@ -656,6 +677,11 @@ public class SplineMeshDeformerEditor : Editor
             {
                 EditorGUI.indentLevel++;
                 EditorGUILayout.Space(2);
+
+                // A declared road never takes the prop code paths, so options that can only act on
+                // props are hidden here rather than shown as no-ops.
+                bool isDeclaredRoad = cMode.enumValueIndex == (int)SplineMeshDeformer.ColliderDeformation.Road;
+
                 EditorGUI.BeginChangeCheck();
                 EditorGUILayout.PropertyField(stretch, new GUIContent("Stretch To Index Ends"));
                 if (EditorGUI.EndChangeCheck() && stretch.boolValue)
@@ -663,7 +689,21 @@ public class SplineMeshDeformerEditor : Editor
                     // Stretching a prop to fill its slot only works if the prop is allowed to deform.
                     dProps.boolValue = true;
                 }
-                EditorGUILayout.PropertyField(element.FindPropertyRelative("allowBoxSimplification"), new GUIContent("Allow Box Simplification"));
+
+                // Collider-only setting: the box swap happens while filling the collider cache, the
+                // visual mesh is never touched. It also depends on two global switches, so it is
+                // greyed out when it cannot take effect instead of sitting there doing nothing.
+                if (!isDeclaredRoad)
+                {
+                    bool boxSwapReachable = generateColliderProp.boolValue && simplifyPropsAsBoxesProp.boolValue;
+                    EditorGUI.BeginDisabledGroup(!boxSwapReachable);
+                    EditorGUILayout.PropertyField(
+                        element.FindPropertyRelative("allowBoxSimplification"),
+                        new GUIContent("Simplify Collider To Box",
+                            "Collider only. Replaces this element's prop parts with a plain box in the generated mesh collider to cut physics cost. The visible mesh is not affected. Requires 'Generate Mesh Collider' plus the global 'Simplify Props as Boxes'."));
+                    EditorGUI.EndDisabledGroup();
+                }
+
                 EditorGUILayout.PropertyField(eScale, new GUIContent("Local Scale"));
                 
                 EditorGUILayout.BeginHorizontal();
@@ -678,20 +718,36 @@ public class SplineMeshDeformerEditor : Editor
 
                 EditorGUILayout.Space(5);
                 
-                // --- CONTEXTUAL UI: Hide Rotation & Bend for Road mode ---
-                if (cMode.enumValueIndex != (int)SplineMeshDeformer.ColliderDeformation.Road)
+                // --- CONTEXTUAL UI ---
+                // Upright and Lock Rotation feed the rotation of EVERY element, road or prop: the
+                // deformer reads them into forceUprightV/lockP* and folds them into the rotation on
+                // the road path too. Hiding them for Road mode made two working settings
+                // unreachable, so they are shown in every mode now.
+                // "Deform Props" is different - it only lifts a prop out of the rigid path
+                // (shouldDeform = isRoad || deformProps), so on a declared road it can never do
+                // anything and is hidden.
+                EditorGUILayout.LabelField("Rotation & Bend", EditorStyles.miniBoldLabel);
+
+                // Drawn as plain toggles rather than PropertyField: these fields carry a
+                // [Header("Element Specific Constraints")] attribute, which the default drawer would
+                // repeat here right under the "Rotation & Bend" label.
+                fUp.boolValue = EditorGUILayout.Toggle(
+                    new GUIContent("Force 100% Upright", "Keeps this element vertical, ignoring the spline's banking. Works for roads and props alike."),
+                    fUp.boolValue);
+
+                if (!isDeclaredRoad)
                 {
-                    EditorGUILayout.LabelField("Rotation & Bend", EditorStyles.miniBoldLabel);
-                    EditorGUILayout.PropertyField(fUp, new GUIContent("Force 100% Upright"));
-                    EditorGUILayout.PropertyField(dProps, new GUIContent("Deform Props"));
-                    
-                    EditorGUILayout.BeginHorizontal();
-                    EditorGUILayout.PrefixLabel("Lock Rotation");
-                    lPX.boolValue = EditorGUILayout.ToggleLeft("X", lPX.boolValue, GUILayout.Width(45));
-                    lPY.boolValue = EditorGUILayout.ToggleLeft("Y", lPY.boolValue, GUILayout.Width(45));
-                    lPZ.boolValue = EditorGUILayout.ToggleLeft("Z", lPZ.boolValue, GUILayout.Width(45));
-                    EditorGUILayout.EndHorizontal();
+                    dProps.boolValue = EditorGUILayout.Toggle(
+                        new GUIContent("Deform Props", "Bends this element along the curve instead of placing it rigidly. Only affects segments treated as props - a road segment already bends."),
+                        dProps.boolValue);
                 }
+
+                EditorGUILayout.BeginHorizontal();
+                EditorGUILayout.PrefixLabel("Lock Rotation");
+                lPX.boolValue = EditorGUILayout.ToggleLeft("X", lPX.boolValue, GUILayout.Width(45));
+                lPY.boolValue = EditorGUILayout.ToggleLeft("Y", lPY.boolValue, GUILayout.Width(45));
+                lPZ.boolValue = EditorGUILayout.ToggleLeft("Z", lPZ.boolValue, GUILayout.Width(45));
+                EditorGUILayout.EndHorizontal();
                 
                 EditorGUI.indentLevel--;
                 EditorGUILayout.Space(2);
@@ -708,8 +764,8 @@ public class SplineMeshDeformerEditor : Editor
             EditorGUILayout.Space(2);
         }
 
-        EditorGUILayout.HelpBox("💡 Priority logic: Elements lower in the list override those above them. You can use this to 'layer' different meshes.", MessageType.Info);
-        if (GUILayout.Button("🛠 Sort by Start Index", GUILayout.Height(20)))
+        EditorGUILayout.HelpBox("Priority logic: Elements lower in the list override those above them. You can use this to 'layer' different meshes.", MessageType.Info);
+        if (GUILayout.Button("Sort by Start Index", GUILayout.Height(20)))
         {
             SortMixedMeshes();
         }
@@ -719,7 +775,6 @@ public class SplineMeshDeformerEditor : Editor
             int count = mixedMeshesProp.arraySize;
             int nextStart = 0;
             int effectiveCount = deformer.segmentCount;
-            int maxIdx = (effectiveCount > 0) ? effectiveCount - 1 : 0;
 
             if (count > 0)
             {
@@ -727,19 +782,30 @@ public class SplineMeshDeformerEditor : Editor
                 nextStart = last.FindPropertyRelative("endIndex").intValue + 1;
             }
 
-            if (nextStart > maxIdx)
+            int newEnd;
+            if (effectiveCount > 0)
             {
-                // If the next logical start is beyond the total segments,
-                // default to the last 5 segments of the existing spline.
-                nextStart = Mathf.Max(0, maxIdx - 4);
+                int maxIdx = effectiveCount - 1;
+                if (nextStart > maxIdx)
+                {
+                    // Next logical start is past the end of the spline: fall back to the tail.
+                    nextStart = Mathf.Max(0, maxIdx - (DefaultElementSpan - 1));
+                }
+                newEnd = maxIdx;
+            }
+            else
+            {
+                // Segment Count has not been set up yet, so there is no end to clamp to. Hand out
+                // a usable span rather than collapsing start and end onto the same index.
+                newEnd = nextStart + DefaultElementSpan - 1;
             }
 
             mixedMeshesProp.arraySize++;
             SerializedProperty newElement = mixedMeshesProp.GetArrayElementAtIndex(count);
-            
+
             // Explicitly reset fields for the new element to avoid Unity's duplication behavior
             newElement.FindPropertyRelative("startIndex").intValue = nextStart;
-            newElement.FindPropertyRelative("endIndex").intValue = maxIdx;
+            newElement.FindPropertyRelative("endIndex").intValue = newEnd;
             
             // Reset assets to null to avoid duplicating the previous element's mesh/prefab
             newElement.FindPropertyRelative("mesh").objectReferenceValue = null;
@@ -775,7 +841,8 @@ public class SplineMeshDeformerEditor : Editor
         // If Layer 0 already references something, leave the user's setup alone.
         if (meshP.objectReferenceValue != null || prefabP.objectReferenceValue != null) return;
 
-        int maxIdx = (deformer.segmentCount > 0) ? deformer.segmentCount - 1 : 0;
+        // Same rule as "+ Add Element": with no segment count yet, seed a usable span instead of 0..0.
+        int maxIdx = (deformer.segmentCount > 0) ? deformer.segmentCount - 1 : DefaultElementSpan - 1;
 
         e0.FindPropertyRelative("startIndex").intValue = 0;
         e0.FindPropertyRelative("endIndex").intValue = maxIdx;

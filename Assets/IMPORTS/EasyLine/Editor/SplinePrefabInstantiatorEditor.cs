@@ -46,10 +46,10 @@ public class SplinePrefabInstantiatorEditor : Editor
         SplinePrefabInstantiator instantiator = (SplinePrefabInstantiator)target;
 
         // --- TITLE ---
-        DrawHeader("EasyLine Prefab Instantiator", new Color(0.3f, 0.9f, 0.4f, 0.2f));
-        
+        DrawHeader("EasyLine Prefab Instantiator", EasyLineEditorUI.Curve);
+
         // --- 1. CURVE SETUP ---
-        DrawSectionHeader("📍 Curve Setup", new Color(0.3f, 1f, 0.4f, 0.15f));
+        DrawSectionHeader("Curve Setup", EasyLineEditorUI.Curve);
         EditorGUILayout.PropertyField(splineProp, new GUIContent("Spline Path", splineProp.tooltip));
         if (splineProp.objectReferenceValue == null)
         {
@@ -59,7 +59,7 @@ public class SplinePrefabInstantiatorEditor : Editor
         EditorGUILayout.Space(5);
 
         // --- 2. PREFAB SETTINGS ---
-        DrawSectionHeader("📦 Prefab Settings", new Color(1f, 0.7f, 0.2f, 0.15f));
+        DrawSectionHeader("Prefab Settings", EasyLineEditorUI.Source);
         EditorGUILayout.PropertyField(prefabProp, new GUIContent("Source Prefab", prefabProp.tooltip));
         if (prefabProp.objectReferenceValue == null)
         {
@@ -94,7 +94,7 @@ public class SplinePrefabInstantiatorEditor : Editor
 
         // --- 4. ALIGNMENT & RANDOMIZATION ---
         GUI.backgroundColor = new Color(0.7f, 0.7f, 0.7f, 0.3f);
-        showAdvanced = EditorGUILayout.BeginFoldoutHeaderGroup(showAdvanced, "⚙ Alignment & Variation");
+        showAdvanced = EditorGUILayout.BeginFoldoutHeaderGroup(showAdvanced, "Alignment & Variation");
         GUI.backgroundColor = Color.white;
         
         if (showAdvanced)
@@ -136,17 +136,17 @@ public class SplinePrefabInstantiatorEditor : Editor
 
         // --- BOTTOM TOOLS ---
         EditorGUILayout.BeginHorizontal();
-        EditorGUILayout.PropertyField(autoUpdateProp, new GUIContent("🔄 Auto Live", autoUpdateProp.tooltip));
-        
+        EditorGUILayout.PropertyField(autoUpdateProp, new GUIContent("Auto Live", autoUpdateProp.tooltip));
+
         GUI.backgroundColor = new Color(0.3f, 0.8f, 1f);
-        if (GUILayout.Button("▶  Spawn Now", GUILayout.Height(24)))
+        if (GUILayout.Button("Spawn Now", GUILayout.Height(24)))
         {
             Undo.RecordObject(instantiator.gameObject, "Update Prefab Instances");
             instantiator.UpdateInstances();
         }
         GUI.backgroundColor = Color.white;
         
-        if (GUILayout.Button("🗑 Clear", GUILayout.Width(60), GUILayout.Height(24)))
+        if (GUILayout.Button("Clear", GUILayout.Width(60), GUILayout.Height(24)))
         {
             Undo.RecordObject(instantiator.gameObject, "Clear Prefab Instances");
             instantiator.ClearInstances();
@@ -163,30 +163,14 @@ public class SplinePrefabInstantiatorEditor : Editor
         }
     }
 
-    private void DrawHeader(string text, Color color)
+    private void DrawHeader(string text, Color accent)
     {
-        Rect rect = GUILayoutUtility.GetRect(0, 30, GUILayout.ExpandWidth(true));
-        GUI.backgroundColor = color;
-        GUI.Box(rect, "", EditorStyles.helpBox);
-        GUI.backgroundColor = Color.white;
-        
-        GUIStyle style = new GUIStyle(EditorStyles.boldLabel);
-        style.alignment = TextAnchor.MiddleCenter;
-        style.fontSize = 14;
-        style.normal.textColor = EditorGUIUtility.isProSkin ? Color.white : Color.black;
-        GUI.Label(rect, text, style);
+        EasyLineEditorUI.TitleBar(text, accent);
     }
 
-    private void DrawSectionHeader(string text, Color color)
+    private void DrawSectionHeader(string text, Color accent)
     {
-        Rect rect = GUILayoutUtility.GetRect(0, 20, GUILayout.ExpandWidth(true));
-        EditorGUI.DrawRect(rect, color);
-        
-        GUIStyle style = new GUIStyle(EditorStyles.label);
-        style.fontStyle = FontStyle.Bold;
-        style.normal.textColor = EditorGUIUtility.isProSkin ? new Color(0.9f, 0.9f, 0.9f) : Color.black;
-        style.padding.left = 5;
-        GUI.Label(rect, text, style);
+        EasyLineEditorUI.SectionHeader(text, accent);
     }
 }
 }

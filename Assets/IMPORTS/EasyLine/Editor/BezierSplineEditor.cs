@@ -20,10 +20,19 @@ namespace EasyLine
         // Notify any SplineMeshDeformer using this spline to auto-update
         private void NotifyConnectedDeformers(bool forceNotDragging = false)
         {
-            if (activeDeformers == null) activeDeformers = Object.FindObjectsOfType<SplineMeshDeformer>();
-            
-            bool isDragging = !forceNotDragging && (GUIUtility.hotControl != 0);
-    
+            bool interacting = GUIUtility.hotControl != 0;
+
+            // Refresh the cache on every discrete action (button, inspector edit, end of drag), but
+            // reuse it while a handle is held. The user cannot add or remove a deformer mid-drag, so
+            // the set is guaranteed stable there - and that is the one path where this runs per mouse
+            // event, so a full scene scan would be far too expensive. Without the refresh a deformer
+            // added while the spline stays selected would never auto-update, because OnEnable only
+            // runs on (re)selection.
+            if (activeDeformers == null || !interacting)
+                activeDeformers = Object.FindObjectsByType<SplineMeshDeformer>();
+
+            bool isDragging = !forceNotDragging && interacting;
+
             foreach (var d in activeDeformers)
             {
                 if (d != null && d.spline == spline && d.autoDeform)
@@ -40,7 +49,7 @@ namespace EasyLine
             {
                 spline.Reset();
             }
-            activeDeformers = Object.FindObjectsOfType<SplineMeshDeformer>();
+            activeDeformers = Object.FindObjectsByType<SplineMeshDeformer>();
         }
     
         public override void OnInspectorGUI()

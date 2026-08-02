@@ -41,7 +41,16 @@ namespace EasyLine
             s_Resolved = true;
 
             s_ProBuilderMeshType = FindType("UnityEngine.ProBuilder.ProBuilderMesh");
-            Type meshUtility = FindType("UnityEngine.ProBuilder.MeshUtility");
+
+            // MeshUtility ships in the same assembly as ProBuilderMesh, so resolve it straight
+            // from there instead of paying for a second assembly scan. If ProBuilderMesh was not
+            // found the package is absent and there is nothing to look for anyway.
+            Type meshUtility = null;
+            if (s_ProBuilderMeshType != null)
+            {
+                try { meshUtility = s_ProBuilderMeshType.Assembly.GetType("UnityEngine.ProBuilder.MeshUtility"); }
+                catch { meshUtility = null; }
+            }
 
             if (s_ProBuilderMeshType != null && meshUtility != null)
             {
@@ -63,9 +72,15 @@ namespace EasyLine
             if (t != null) return t;
 
             // Fallback: scan loaded assemblies (covers renamed/repackaged assemblies).
-            foreach (Assembly asm in AppDomain.CurrentDomain.GetAssemblies())
+            // Uses Unity's own registry instead of AppDomain.CurrentDomain.GetAssemblies(), which
+            // may hand back already-unloaded assemblies and leak or throw (analyzer UAC0005).
+            // TypeCache is not an option here - it is editor-only and this is runtime code.
+            IReadOnlyList<Assembly> loaded = UnityEngine.Assemblies.CurrentAssemblies.GetLoadedAssemblies();
+            if (loaded == null) return null;
+
+            for (int i = 0; i < loaded.Count; i++)
             {
-                try { t = asm.GetType(fullName); }
+                try { t = loaded[i].GetType(fullName); }
                 catch { t = null; }
                 if (t != null) return t;
             }
