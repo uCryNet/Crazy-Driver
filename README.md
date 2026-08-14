@@ -24,17 +24,6 @@ The project currently serves as a development sandbox for a driving game and inc
 - URP-based rendering
 - Imported environment and stylized game assets
 
-## Development Workflow
-
-The project is currently organized around rapid gameplay and level-design iteration. A typical workflow is:
-
-1. Build or modify road modules in `Assets/Prefabs/Roads/`.
-2. Assemble and test environments in `Assets/Scenes/Test Lvl.unity`.
-3. Iterate on the player vehicle prefab.
-4. Tune camera behaviour with Cinemachine.
-5. Prototype navigation and spline-based systems as needed.
-6. Validate the result in Play Mode before committing changes.
-
 ## Repository Notes
 
 This repository is a work in progress. The structure and gameplay systems may change significantly as the prototype evolves.
