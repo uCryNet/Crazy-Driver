@@ -3,3 +3,10 @@ guid: 4cedf5c172264eefb6d0e105f715a538
 NativeFormatImporter:
   userData: 
   assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 243624
+  packageName: Sim-Cade Vehicle Physics
+  packageVersion: 1.8
+  assetPath: Assets/IMPORTS/Ash Assets/Sim-Cade Vehicle Physics/Materials/ParticleCollisionLight.mat
+  uploadId: 886836

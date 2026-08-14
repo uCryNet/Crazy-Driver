@@ -125,3 +125,11 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 243624
+  packageName: Sim-Cade Vehicle Physics
+  packageVersion: 1.8
+  assetPath: Assets/IMPORTS/Ash Assets/Sim-Cade Vehicle Physics/Models/Sample Map/FBX
+    Files/Buildings/buildings_col/rus_build_4et_roof_col.obj
+  uploadId: 886836

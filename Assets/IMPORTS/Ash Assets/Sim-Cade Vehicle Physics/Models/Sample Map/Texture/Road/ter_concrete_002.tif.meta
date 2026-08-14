@@ -145,3 +145,10 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 243624
+  packageName: Sim-Cade Vehicle Physics
+  packageVersion: 1.8
+  assetPath: Assets/IMPORTS/Ash Assets/Sim-Cade Vehicle Physics/Models/Sample Map/Texture/Road/ter_concrete_002.tif
+  uploadId: 886836

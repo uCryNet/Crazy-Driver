@@ -737,6 +737,7 @@ namespace Ashsvp
 
         #region Utility
 
+#if UNITY_EDITOR
         [ContextMenu("Adjust Accele Curve By Gears")]
         public void AdjustAccelerationCurveByGears()
         {
@@ -758,6 +759,7 @@ namespace Ashsvp
             // Mark the object as dirty so that Unity saves the changes
             UnityEditor.EditorUtility.SetDirty(this);
         }
+#endif
 
         #endregion
 

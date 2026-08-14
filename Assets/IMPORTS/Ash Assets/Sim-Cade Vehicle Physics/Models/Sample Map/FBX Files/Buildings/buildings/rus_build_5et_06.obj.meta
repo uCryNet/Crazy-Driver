@@ -140,3 +140,11 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 243624
+  packageName: Sim-Cade Vehicle Physics
+  packageVersion: 1.8
+  assetPath: Assets/IMPORTS/Ash Assets/Sim-Cade Vehicle Physics/Models/Sample Map/FBX
+    Files/Buildings/buildings/rus_build_5et_06.obj
+  uploadId: 886836

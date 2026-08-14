@@ -2,6 +2,9 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+#if UNITY_EDITOR && ENABLE_INPUT_SYSTEM
+using UnityEditor;
+#endif
 using static Ashsvp.InputManager_SVP;
 
 namespace Ashsvp
@@ -65,7 +68,6 @@ namespace Ashsvp
                 : Mathf.Lerp(SteerInput, tempSteerInput, 25 * Time.deltaTime);
             HandbrakeInput = tempHandbrakeInput;
 
-            //provide input to vehicle controller
             SimcadeVehicleController.ProvideInputs(AccelerationInput, SteerInput, HandbrakeInput);
 
         }
@@ -122,4 +124,27 @@ namespace Ashsvp
         }
 
     }
+
+#if UNITY_EDITOR && ENABLE_INPUT_SYSTEM
+    [CustomEditor(typeof(InputManager_SVP))]
+    public class InputManager_SVPEditor : Editor
+    {
+        public override void OnInspectorGUI()
+        {
+            DrawDefaultInspector();
+
+            InputManager_SVP manager = (InputManager_SVP)target;
+
+            if (GUILayout.Button("Upgrade to New Input System"))
+            {
+                GameObject go = manager.gameObject;
+                SimcadeVehicleController controller = manager.SimcadeVehicleController;
+                Undo.DestroyObjectImmediate(manager);
+                NewInputManager_SVP newManager = Undo.AddComponent<NewInputManager_SVP>(go);
+                newManager.SimcadeVehicleController = controller;
+                newManager.AddDefaultBindings();
+            }
+        }
+    }
+#endif
 }

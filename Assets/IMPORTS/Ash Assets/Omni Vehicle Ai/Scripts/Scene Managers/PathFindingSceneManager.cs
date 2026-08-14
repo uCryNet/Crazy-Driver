@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
+using Unity.Cinemachine;
 
 namespace OmniVehicleAi
 {
@@ -10,8 +11,8 @@ namespace OmniVehicleAi
         public Button SetDestinationButton;
         public Button CloseDestinationViewButton;
 
-        public Cinemachine.CinemachineVirtualCamera VehicleCamera;
-        public Cinemachine.CinemachineVirtualCamera SelectDectinationCamera;
+        public CinemachineCamera VehicleCamera;
+        public CinemachineCamera SelectDectinationCamera;
 
         public Transform VisualTarget;
         

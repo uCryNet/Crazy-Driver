@@ -88,6 +88,7 @@ namespace Ashsvp
         }
 
 
+#if UNITY_EDITOR
         [ContextMenu("Auto Adjust GearSpeeds")]
         public void AutoAdjustGearSpeeds()
         {
@@ -131,6 +132,7 @@ namespace Ashsvp
             // Mark the object as dirty so that Unity saves the changes
             UnityEditor.EditorUtility.SetDirty(this);
         }
+#endif
 
 
     }

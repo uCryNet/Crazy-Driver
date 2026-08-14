@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4f968c61ef4c39347b9e852490a72cfe
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 243624
+  packageName: Sim-Cade Vehicle Physics
+  packageVersion: 1.8
+  assetPath: Assets/IMPORTS/Ash Assets/Sim-Cade Vehicle Physics/Prefabs/Camera Rigs/CinemachineCamera_Orbital.prefab
+  uploadId: 886836
