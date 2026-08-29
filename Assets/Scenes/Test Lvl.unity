@@ -18007,7 +18007,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34bd29e81e7da52cfa316d6b6843fa09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  jumpForce: 7
+  minJumpHeight: 1
+  maxJumpHeight: 3
+  fullHeightSpeed: 15
+  airGravityMultiplier: 4
 --- !u!114 &716713936
 MonoBehaviour:
   m_ObjectHideFlags: 0
