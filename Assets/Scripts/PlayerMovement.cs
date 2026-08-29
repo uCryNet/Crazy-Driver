@@ -2,22 +2,21 @@ using Ashsvp;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-/// <summary>
-/// Crazy Taxi style hop: a short, fast jump whose height depends on how fast the car is going.
-/// </summary>
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
-    [Tooltip("Jump height (m) from a standstill.")]
+    [Header("Jump Settings")][Space(10)]
+    
+    [Tooltip("Standard jump height (m) at zero speed")]
     public float minJumpHeight = 1f;
 
-    [Tooltip("Jump height (m) at full speed.")]
+    [Tooltip("Max jump height (m) at $(fullHeightSpeed) speed")]
     public float maxJumpHeight = 3f;
 
-    [Tooltip("Speed (m/s) at which the jump reaches its maximum height.")]
+    [Tooltip("Speed when we rich max jump height")]
     public float fullHeightSpeed = 10f;
 
-    [Tooltip("Gravity multiplier while airborne. Higher = faster jump, less hang time.")]
+    [Tooltip("Gravity multiplier while airborne. Higher - faster jump, less - jumping time")]
     public float airGravityMultiplier = 2f;
 
     private Rigidbody rb;
