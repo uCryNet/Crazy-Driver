@@ -890,7 +890,6 @@ GameObject:
   - component: {fileID: 2226967810682025214}
   - component: {fileID: 6629336016676961632}
   - component: {fileID: 7081874114331021262}
-  - component: {fileID: 967979094306262955}
   - component: {fileID: 5642327733913462613}
   - component: {fileID: 303398562630461464}
   m_Layer: 11
@@ -1421,32 +1420,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e63e9b5fd272649499f3444be7c348de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &967979094306262955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5697242674642010140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1351e73f28e8d64458144fb224600e6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SimcadeVehicleController: {fileID: 0}
-  keyboardInput:
-    steerLeft: 97
-    steerRight: 100
-    accelerate: 119
-    decelerate: 115
-    handBrake: 32
-  useMobileInput: 0
-  mobileInput:
-    steerLeft: {fileID: 0}
-    steerRight: {fileID: 0}
-    accelerate: {fileID: 0}
-    decelerate: {fileID: 0}
-    handBrake: {fileID: 0}
 --- !u!114 &5642327733913462613
 MonoBehaviour:
   m_ObjectHideFlags: 0
