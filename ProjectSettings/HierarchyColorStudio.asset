@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e1aab73da22cc4890818555df7d414, type: 3}
+  m_Name: Hierarchy Color Studio
+  m_EditorClassIdentifier: CryNet.HierarchyColorStudio.Editor::CryNet.HierarchyColorStudio.HierarchyColorStore
+  m_Version: 1
+  m_Appearance:
+    m_Enabled: 1
+    m_Decorations: 3
+    m_MarkerShape: 1
+    m_MarkerPlacement: 0
+    m_MarkerSize: 9
+    m_TintOpacity: 0.3
+    m_TintScope: 0
+    m_LabelBrightness: 1
+    m_LabelFillsBackground: 0
+    m_RowBackgroundDark: {r: 0.2196, g: 0.2196, b: 0.2196, a: 1}
+    m_RowBackgroundLight: {r: 0.7843, g: 0.7843, b: 0.7843, a: 1}
+    m_SelectedRowBehavior: 0
+    m_HoverBehavior: 0
+    m_LabelOffset: 18
+    m_DefaultApplyScope: 0
+    m_DebugLogging: 0
+  m_Presets:
+  - m_Id: d28f1bd2a26843508f85b124241bb901
+    m_Name: Red
+    m_Color: FF1800FF
+  - m_Id: 1e7b408729904c3fb38ed8f313b70e1c
+    m_Name: Orange
+    m_Color: FF7800FF
+  - m_Id: 4340f94422974ef181cb3ce26a15d385
+    m_Name: Amber
+    m_Color: F1C40FFF
+  - m_Id: 4370946002a9415cbaaccbe03502d618
+    m_Name: Green
+    m_Color: 00FE6CFF
+  - m_Id: c52e39e9d8a147ffb68527a7084042a1
+    m_Name: Teal
+    m_Color: 1ABC9CFF
+  - m_Id: 8824896bc1c640cc8be5c7b6488ed437
+    m_Name: Blue
+    m_Color: 3498DBFF
+  - m_Id: 843161bbb397447db8079b1534b8f1ea
+    m_Name: Indigo
+    m_Color: 5B6CE8FF
+  - m_Id: 17aba49bcb464a9492f7dc1afd3dceb6
+    m_Name: Violet
+    m_Color: 9B59B6FF
+  - m_Id: 885d75821d3a4cd5b77b72a83ed8b13c
+    m_Name: Pink
+    m_Color: E85A9BFF
+  - m_Id: ba6a284a4e1049c18b04747fab786eb1
+    m_Name: Slate
+    m_Color: 7F8C8DFF
+  - m_Id: d8ec179f3eb14d899acbe348bde5d4a6
+    m_Name: White
+    m_Color: FFFFFFFF
+  m_Assignments:
+  - m_Key: GlobalObjectId_V1-2-6da6bce0b11ee48979a2317b89629f84-423336021-0
+    m_Color: FF1800FF
+    m_PresetId: d28f1bd2a26843508f85b124241bb901
+  - m_Key: GlobalObjectId_V1-2-6da6bce0b11ee48979a2317b89629f84-2021549802-0
+    m_Color: 00FE6CFF
+    m_PresetId: 4370946002a9415cbaaccbe03502d618
