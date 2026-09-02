@@ -130,6 +130,7 @@ Material:
     - _UVSec: 0
     - _Use_View_Edge_Compensation: 1
     - _ViewEdgePower: 1
+    - _XRMotionVectorsPass: 1
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
