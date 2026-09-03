@@ -7,8 +7,11 @@ public class TrafficManager : MonoBehaviour
     [Header("Traffic Manager")][Space(10)]
 
     public Transform player;
-    public float activationDistance = 120f;
-    public float deactivationDistance = 160f;
+    public float activationDistance = 150f;
+    public float deactivationDistance = 180f;
+    
+    [Tooltip("Check this distance from a spot to see if it's occupied by another car")]
+    public float minSpawnClearance = 5f;
     
     private const string TrafficTag = "Traffic";
     private const float CheckInterval = 1f;
@@ -26,9 +29,7 @@ public class TrafficManager : MonoBehaviour
         }
 
         CollectAiCars();
-
-        // Everything starts off, so the cars don't have to be disabled by hand in the
-        // Inspector. The first check below switches on whatever is already near the player.
+        
         foreach (GameObject car in aiCars)
         {
             car.SetActive(false);
@@ -36,11 +37,7 @@ public class TrafficManager : MonoBehaviour
 
         InvokeRepeating(nameof(UpdateAiCars), 0f, CheckInterval);
     }
-
-    /// <summary>
-    /// GameObject.FindGameObjectsWithTag skips inactive objects, and cars may already be
-    /// disabled in the scene, so the scene roots are walked once instead.
-    /// </summary>
+    
     private void CollectAiCars()
     {
         aiCars.Clear();
@@ -50,8 +47,6 @@ public class TrafficManager : MonoBehaviour
         {
             foreach (Transform child in root.GetComponentsInChildren<Transform>(true))
             {
-                // Plain string compare, not CompareTag: an unknown tag makes CompareTag
-                // throw, which would abort Start and leave every car switched on.
                 if (child.gameObject.CompareTag(TrafficTag))
                 {
                     aiCars.Add(child.gameObject);
@@ -72,7 +67,7 @@ public class TrafficManager : MonoBehaviour
             return;
         }
 
-        // Comparing squared distances keeps the square root out of the loop.
+        // Comparing squared distances keeps the square root out of the loop
         float activationSqr = activationDistance * activationDistance;
         float deactivationSqr = deactivationDistance * deactivationDistance;
         Vector3 playerPosition = player.position;
@@ -93,10 +88,37 @@ public class TrafficManager : MonoBehaviour
                     car.SetActive(false);
                 }
             }
-            else if (sqrDistance <= activationSqr)
+            else if (sqrDistance <= activationSqr && !IsSpotOccupied(car, playerPosition))
             {
                 car.SetActive(true);
             }
         }
+    }
+
+    // Check a spot under disabled cars to see if it's occupied by another car. If so, don't activate
+    private bool IsSpotOccupied(GameObject car, Vector3 playerPosition)
+    {
+        float clearanceSqr = minSpawnClearance * minSpawnClearance;
+        Vector3 position = car.transform.position;
+
+        if ((playerPosition - position).sqrMagnitude <= clearanceSqr)
+        {
+            return true;
+        }
+        
+        foreach (GameObject other in aiCars)
+        {
+            if (other == null || other == car || !other.activeSelf)
+            {
+                continue;
+            }
+
+            if ((other.transform.position - position).sqrMagnitude <= clearanceSqr)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

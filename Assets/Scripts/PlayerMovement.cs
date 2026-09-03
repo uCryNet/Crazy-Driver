@@ -19,8 +19,12 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Gravity multiplier while airborne. Higher - faster jump, less - jumping time")]
     public float airGravityMultiplier = 2f;
 
+    [Tooltip("Delay after touchdown before the car can jump again")]
+    public float jumpCooldown = 1f;
+
     private Rigidbody rb;
     private SimcadeVehicleController vehicle;
+    private float nextJumpTime;
 
     private bool IsGrounded => vehicle == null || vehicle.vehicleIsGrounded;
 
@@ -34,16 +38,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Extra gravity in the air only, so the car snaps back down instead of floating.
         if (!IsGrounded)
         {
             rb.AddForce(Physics.gravity * (airGravityMultiplier - 1f), ForceMode.Acceleration);
+            nextJumpTime = Time.time + jumpCooldown;
         }
     }
 
     public void OnJump(InputValue value)
     {
-        if (!value.isPressed || !IsGrounded)
+        if (!value.isPressed || !IsGrounded || Time.time < nextJumpTime)
         {
             return;
         }
@@ -55,5 +59,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 velocity = rb.linearVelocity;
         velocity.y = Mathf.Sqrt(2f * AirGravity * height);
         rb.linearVelocity = velocity;
+        
+        nextJumpTime = Time.time + jumpCooldown;
     }
 }
