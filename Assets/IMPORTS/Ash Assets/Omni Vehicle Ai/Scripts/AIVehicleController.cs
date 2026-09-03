@@ -136,7 +136,9 @@ namespace OmniVehicleAi
             public Transform sensorPoint;
             [Tooltip("Direction of the sensor.")]
             [HideInInspector] public float direction;
-            [HideInInspector] public RaycastHit hit;
+            // Raycast scratch, rewritten every frame - nothing to persist, and Unity
+            // can't serialize RaycastHit anyway (analyzer UAC1001).
+            [NonSerialized] public RaycastHit hit;
         }
 
         #endregion
