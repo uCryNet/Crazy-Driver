@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     
     public Rigidbody player;
     public Collider finishZone;
+    public TrafficManager trafficManager;
 
     [Tooltip("Label that shows the finish message. Its object is enabled on win")]
     public TMP_Text info;
@@ -19,7 +20,7 @@ public class GameManager : MonoBehaviour
     public float requiredStopTime = 0.2f;
 
     private float stoppedTime;
-    private bool levelCompleted;
+    private bool isLevelCompleted;
     
     private const string FinishText = "FINISH!";
     private const string StartText = "GO!";
@@ -54,7 +55,7 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (levelCompleted)
+        if (isLevelCompleted)
         {
             return;
         }
@@ -69,12 +70,15 @@ public class GameManager : MonoBehaviour
 
         if (stoppedTime >= requiredStopTime)
         {
-            levelCompleted = true;
+            isLevelCompleted = true;
 
             StopAllCoroutines();
 
             info.text = FinishText;
             info.gameObject.SetActive(true);
+
+            player.constraints = RigidbodyConstraints.FreezeAll;
+            trafficManager.StopTraffic();
         }
     }
 

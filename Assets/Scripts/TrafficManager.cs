@@ -60,6 +60,17 @@ public class TrafficManager : MonoBehaviour
         }
     }
 
+    // Called on level completion - the cars keep standing where they are instead of vanishing
+    public void StopTraffic()
+    {
+        CancelInvoke(nameof(UpdateAiCars));
+
+        foreach (GameObject car in aiCars)
+        {
+            car.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        }
+    }
+
     private void UpdateAiCars()
     {
         if (player == null)
