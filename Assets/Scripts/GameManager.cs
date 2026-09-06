@@ -12,6 +12,12 @@ public class GameManager : MonoBehaviour
     [Tooltip("Label that shows the finish message. Its object is enabled on win")]
     public TMP_Text info;
 
+    [Tooltip("Label that counts down the seconds left")]
+    public TMP_Text timer;
+
+    [Tooltip("Seconds to reach the finish, counted from the GO message")]
+    public int timeLimit = 60;
+
     [Tooltip("Speed (m/s) at or below which the car counts as stopped")]
     public float stopSpeedThreshold = 0.5f;
 
@@ -22,6 +28,7 @@ public class GameManager : MonoBehaviour
     private bool isLevelCompleted;
     
     private const string FinishText = "FINISH!";
+    private const string LooserText = "LOOSER!";
     private const string StartText = "GO!";
     private const int CountdownFrom = 3;
     private const float CountdownStep = 1f;
@@ -29,6 +36,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        timer.text = timeLimit.ToString();
+
         StartCoroutine(CountdownRoutine());
     }
 
@@ -47,9 +56,23 @@ public class GameManager : MonoBehaviour
         player.constraints = RigidbodyConstraints.None;
 
         info.text = StartText;
+        StartCoroutine(TimerRoutine());
+
         yield return new WaitForSeconds(GoMessageTime);
 
         info.gameObject.SetActive(false);
+    }
+
+    private IEnumerator TimerRoutine()
+    {
+        for (int secondsLeft = timeLimit; secondsLeft > 0; secondsLeft--)
+        {
+            timer.text = secondsLeft.ToString();
+            yield return new WaitForSeconds(1f);
+        }
+
+        timer.text = "0";
+        EndLevel(LooserText);
     }
 
     private void FixedUpdate()
@@ -69,15 +92,21 @@ public class GameManager : MonoBehaviour
 
         if (stoppedTime >= requiredStopTime)
         {
-            isLevelCompleted = true;
-
-            StopAllCoroutines();
-
-            info.text = FinishText;
-            info.gameObject.SetActive(true);
-
-            player.constraints = RigidbodyConstraints.FreezeAll;
+            EndLevel(FinishText);
         }
+    }
+
+    private void EndLevel(string message)
+    {
+        isLevelCompleted = true;
+
+        // Stops the countdown and the timer from writing over the message
+        StopAllCoroutines();
+
+        info.text = message;
+        info.gameObject.SetActive(true);
+
+        player.constraints = RigidbodyConstraints.FreezeAll;
     }
 
     private bool IsPlayerOnFinish()
