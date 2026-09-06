@@ -26,8 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private SimcadeVehicleController vehicle;
     private float nextJumpTime;
 
-    private bool IsGrounded => vehicle == null || vehicle.vehicleIsGrounded;
-
+    private bool IsGrounded => vehicle.vehicleIsGrounded;
     private float AirGravity => Mathf.Abs(Physics.gravity.y) * airGravityMultiplier;
 
     private void Awake()

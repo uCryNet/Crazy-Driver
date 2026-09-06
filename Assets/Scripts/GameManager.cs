@@ -1,12 +1,18 @@
+using Ashsvp;
 using System.Collections;
 using TMPro;
 using UnityEngine;
 
+/*
+ * player.linearVelocity.magnitude - speed of player
+ */
+
 public class GameManager : MonoBehaviour
 {
-    [Header("Finish Conditions")][Space(10)]
+    [Header("Game Manager")][Space(10)]
     
     public Rigidbody player;
+    public SimcadeVehicleController vehicle;
     public Collider finishZone;
 
     [Tooltip("Label that shows the finish message. Its object is enabled on win")]
@@ -15,14 +21,9 @@ public class GameManager : MonoBehaviour
     [Tooltip("Label that counts down the seconds left")]
     public TMP_Text timer;
 
+    [Header("Level Set Up")][Space(10)]
     [Tooltip("Seconds to reach the finish, counted from the GO message")]
     public int timeLimit = 60;
-
-    [Tooltip("Speed (m/s) at or below which the car counts as stopped")]
-    public float stopSpeedThreshold = 0.5f;
-
-    [Tooltip("How long the car has to stay stopped on the platform. Zero wins the moment it stops")]
-    public float requiredStopTime = 0.2f;
 
     private float stoppedTime;
     private bool isLevelCompleted;
@@ -33,6 +34,9 @@ public class GameManager : MonoBehaviour
     private const int CountdownFrom = 3;
     private const float CountdownStep = 1f;
     private const float GoMessageTime = 2f;
+    private const float StopSpeedThreshold = 0.5f; // Speed (m/s) at or below which the car counts as stopped
+    private const float RequiredStopTime = 0.2f; // How long the car has to stay stopped on the platform. Zero wins the moment it stops
+    private bool IsGrounded => vehicle.vehicleIsGrounded;
 
     private void Start()
     {
@@ -77,12 +81,10 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isLevelCompleted)
-        {
-            return;
-        }
+        if (isLevelCompleted) return;
 
-        if (!IsPlayerOnFinish() || player.linearVelocity.magnitude > stopSpeedThreshold)
+        // Loose condition. Time is up
+        if (!IsPlayerOnFinish() || player.linearVelocity.magnitude > StopSpeedThreshold)
         {
             stoppedTime = 0f;
             return;
@@ -90,7 +92,8 @@ public class GameManager : MonoBehaviour
 
         stoppedTime += Time.fixedDeltaTime;
 
-        if (stoppedTime >= requiredStopTime)
+        // Win condition
+        if (stoppedTime >= RequiredStopTime)
         {
             EndLevel(FinishText);
         }
@@ -99,12 +102,23 @@ public class GameManager : MonoBehaviour
     private void EndLevel(string message)
     {
         isLevelCompleted = true;
-
-        // Stops the countdown and the timer from writing over the message
-        StopAllCoroutines();
+        
+        StopAllCoroutines(); // Stops the countdown and the timer
 
         info.text = message;
         info.gameObject.SetActive(true);
+
+        StartCoroutine(FreezePlayerRoutine());
+    }
+
+    private IEnumerator FreezePlayerRoutine()
+    {
+        player.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+
+        while (!IsGrounded)
+        {
+            yield return new WaitForFixedUpdate();
+        }
 
         player.constraints = RigidbodyConstraints.FreezeAll;
     }
