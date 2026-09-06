@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     
     public Rigidbody player;
     public Collider finishZone;
-    public TrafficManager trafficManager;
 
     [Tooltip("Label that shows the finish message. Its object is enabled on win")]
     public TMP_Text info;
@@ -78,7 +77,6 @@ public class GameManager : MonoBehaviour
             info.gameObject.SetActive(true);
 
             player.constraints = RigidbodyConstraints.FreezeAll;
-            trafficManager.StopTraffic();
         }
     }
 
