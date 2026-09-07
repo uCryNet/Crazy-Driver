@@ -3271,7 +3271,7 @@ GameObject:
   - component: {fileID: 524467664}
   m_Layer: 0
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: KillZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3363,9 +3363,9 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 9.999999, y: 2.220446e-16, z: 10}
   m_Center: {x: 0.000000014901161, y: -0.00000011920929, z: 0.000000059604645}
@@ -4908,7 +4908,7 @@ MonoBehaviour:
   finishZone: {fileID: 1183012221}
   info: {fileID: 1437303839}
   timer: {fileID: 1589418435}
-  timeLimit: 5
+  timeLimit: 20
 --- !u!1 &1921979353
 GameObject:
   m_ObjectHideFlags: 0
@@ -4920,9 +4920,10 @@ GameObject:
   - component: {fileID: 1921979354}
   - component: {fileID: 1921979357}
   - component: {fileID: 1921979355}
+  - component: {fileID: 1921979358}
   m_Layer: 0
   m_Name: Water (1)
-  m_TagString: Untagged
+  m_TagString: KillZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4999,6 +5000,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921979353}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1921979358
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921979353}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.999999, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0.000000014901161, y: -0.00000011920929, z: 0}
 --- !u!1 &1939852593
 GameObject:
   m_ObjectHideFlags: 0
@@ -23637,6 +23659,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 218400362653789642, guid: a2092dade2686af8aa1545166b5d4443, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5697242674642010140, guid: a2092dade2686af8aa1545166b5d4443, type: 3}
       propertyPath: m_Name
       value: Player
@@ -23698,6 +23724,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5697242674642010140, guid: a2092dade2686af8aa1545166b5d4443, type: 3}
       insertIndex: -1
       addedObject: {fileID: 716713936}
+    - targetCorrespondingSourceObject: {fileID: 5697242674642010140, guid: a2092dade2686af8aa1545166b5d4443, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4867872302481757873}
   m_SourcePrefab: {fileID: 100100000, guid: a2092dade2686af8aa1545166b5d4443, type: 3}
 --- !u!4 &4867872302481757856 stripped
 Transform:
@@ -23720,6 +23749,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228805c2cfb68164680169bec503f811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4867872302481757873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716713912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 770ce62fd82ea8410bf45fe043bfab6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterDetector
+  gameManager: {fileID: 1878671375}
 --- !u!23 &5129710510300011530
 MeshRenderer:
   m_ObjectHideFlags: 0

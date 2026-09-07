@@ -76,14 +76,13 @@ public class GameManager : MonoBehaviour
         }
 
         timer.text = "0";
-        EndLevel(LooserText);
+        LooseLevel();
     }
 
     private void FixedUpdate()
     {
         if (isLevelCompleted) return;
 
-        // Loose condition. Time is up
         if (!IsPlayerOnFinish() || player.linearVelocity.magnitude > StopSpeedThreshold)
         {
             stoppedTime = 0f;
@@ -97,6 +96,14 @@ public class GameManager : MonoBehaviour
         {
             EndLevel(FinishText);
         }
+    }
+
+    // Called by KillZoneDetector, which rides on the player and reports what it drove into
+    public void LooseLevel()
+    {
+        if (isLevelCompleted) return;
+
+        EndLevel(LooserText);
     }
 
     private void EndLevel(string message)
