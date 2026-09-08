@@ -3,10 +3,6 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-/*
- * player.linearVelocity.magnitude - speed of player
- */
-
 public class GameManager : MonoBehaviour
 {
     [Header("Game Manager")][Space(10)]
@@ -24,8 +20,6 @@ public class GameManager : MonoBehaviour
     [Tooltip("Seconds to reach the finish, counted from the GO message")]
     public int timeLimit = 60;
 
-    private bool isPlayerOnFinish;
-    private float stoppedTime;
     private bool isLevelCompleted;
     
     private const string FinishText = "FINISH!";
@@ -34,8 +28,6 @@ public class GameManager : MonoBehaviour
     private const int CountdownFrom = 3;
     private const float CountdownStep = 1f;
     private const float GoMessageTime = 2f;
-    private const float StopSpeedThreshold = 0.5f; // Speed (m/s) at or below which the car counts as stopped
-    private const float RequiredStopTime = 0.2f; // How long the car has to stay stopped on the platform. Zero wins the moment it stops
     private bool IsGrounded => vehicle.vehicleIsGrounded;
 
     private void Start()
@@ -79,30 +71,12 @@ public class GameManager : MonoBehaviour
         LooseLevel();
     }
 
-    private void FixedUpdate()
+    // Called by FinishDetector once the car has stood still inside the finish zone
+    public void WinLevel()
     {
         if (isLevelCompleted) return;
 
-        if (!isPlayerOnFinish || player.linearVelocity.magnitude > StopSpeedThreshold)
-        {
-            stoppedTime = 0f;
-            return;
-        }
-
-        stoppedTime += Time.fixedDeltaTime;
-
-        // Win condition
-        if (stoppedTime >= RequiredStopTime)
-        {
-            EndLevel(FinishText);
-        }
-    }
-
-    // Called by FinishDetector, the win needs the car standing still
-    public void SetOnFinish(bool isInside)
-    {
-        isPlayerOnFinish = isInside;
-        stoppedTime = 0f;
+        EndLevel(FinishText);
     }
 
     // Called by KillZoneDetector, which rides on the player and reports what it drove into
