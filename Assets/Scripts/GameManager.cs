@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     
     public Rigidbody player;
     public SimcadeVehicleController vehicle;
-    public Collider finishZone;
 
     [Tooltip("Label that shows the finish message. Its object is enabled on win")]
     public TMP_Text info;
@@ -25,6 +24,7 @@ public class GameManager : MonoBehaviour
     [Tooltip("Seconds to reach the finish, counted from the GO message")]
     public int timeLimit = 60;
 
+    private bool isPlayerOnFinish;
     private float stoppedTime;
     private bool isLevelCompleted;
     
@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
     {
         if (isLevelCompleted) return;
 
-        if (!IsPlayerOnFinish() || player.linearVelocity.magnitude > StopSpeedThreshold)
+        if (!isPlayerOnFinish || player.linearVelocity.magnitude > StopSpeedThreshold)
         {
             stoppedTime = 0f;
             return;
@@ -96,6 +96,13 @@ public class GameManager : MonoBehaviour
         {
             EndLevel(FinishText);
         }
+    }
+
+    // Called by FinishDetector, the win needs the car standing still
+    public void SetOnFinish(bool isInside)
+    {
+        isPlayerOnFinish = isInside;
+        stoppedTime = 0f;
     }
 
     // Called by KillZoneDetector, which rides on the player and reports what it drove into
@@ -128,12 +135,5 @@ public class GameManager : MonoBehaviour
         }
 
         player.constraints = RigidbodyConstraints.FreezeAll;
-    }
-
-    private bool IsPlayerOnFinish()
-    {
-        Vector3 position = player.position;
-
-        return finishZone.ClosestPoint(position) == position;
     }
 }
