@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Water_Level
+  m_Name: Water_Level_1
   m_Shader: {fileID: -6465566751694194690, guid: 436db39b4e2ae5e46a17e21865226b19, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -90,7 +90,7 @@ Material:
     - _Caustics_Use_Voronoi_Noise: 1
     - _Cull: 2
     - _Cutoff: 0.5
-    - _Deep_Height: 1
+    - _Deep_Height: 6
     - _Deep_Intensity: 1
     - _Depth_Distance: 3.94
     - _Depth_Height: 2.43
@@ -209,7 +209,7 @@ Material:
     - _CausticsColor: {r: 0.7529412, g: 0.7333333, b: 0.6509804, a: 0}
     - _Caustics_Color: {r: 1, g: 0.97889644, b: 0.8156863, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Deep_Color: {r: 0, g: 0.8584069, b: 1, a: 1}
+    - _Deep_Color: {r: 0.003921569, g: 0.25490198, b: 0.54901963, a: 1}
     - _Depth_Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Distant_Water_Color: {r: 0, g: 0.17334907, b: 0.33962262, a: 1}
     - _Distortion_Direction: {r: 0.1, g: 0.1, b: 0, a: 0}
@@ -225,7 +225,7 @@ Material:
     - _Scrolling_Texture_Direction: {r: 0, g: -0.01, b: 0, a: 0}
     - _Scrolling_Texture_Tiling: {r: 1, g: 1, b: 0, a: 0}
     - _Scrolling_Texture_Tint: {r: 0.37121746, g: 0.7245609, b: 0.8113207, a: 0}
-    - _Shallow_Color: {r: 0, g: 0.85882354, b: 1, a: 1}
+    - _Shallow_Color: {r: 0.5372549, g: 0.8352941, b: 0.8039216, a: 1}
     - _Shore_Foam_Color_Tint: {r: 1, g: 1, b: 1, a: 0}
     - _Shore_Foam_Noise_Scale: {r: 1, g: 1, b: 0, a: 0}
     - _Shore_Glow_Color: {r: 1, g: 1, b: 1, a: 0}
@@ -237,7 +237,7 @@ Material:
     - _Specular_Color: {r: 1, g: 1, b: 1, a: 0}
     - _Tiling_Amount: {r: 1, g: 1, b: 0, a: 0}
     - _Top_Scroll_Color: {r: 0.37121746, g: 0.7245609, b: 0.8113207, a: 0}
-    - _Very_Deep_Color: {r: 0, g: 0.85882354, b: 1, a: 1}
+    - _Very_Deep_Color: {r: 0.003921569, g: 0.24705882, b: 0.5372549, a: 0}
     - _Water_Deep_Color: {r: 0.19340093, g: 0.519, b: 0.49027064, a: 0}
     - _Water_Far_Color: {r: 0.2117647, g: 0.5921569, b: 0.6509804, a: 1}
     - _Water_Near_Color: {r: 0.09411765, g: 0.227451, b: 0.3019608, a: 1}
