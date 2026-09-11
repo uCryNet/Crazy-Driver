@@ -8,6 +8,13 @@ namespace Ashsvp
     {
         #region Variables
 
+        [Header("Custom fields")]
+        [Space(10)]
+        [Tooltip("Deceleration used when the input opposes the motion")]
+        public float deceleration = 25f;
+        [Tooltip("Seconds the car has to stand still before the reverse engages")]
+        public float reverseDelay = 0.1f;
+
         [Header("Suspension")]
         [Space(10)]
         public float springForce = 30000f;
@@ -90,6 +97,7 @@ namespace Ashsvp
         private int NumberOfGroundedWheels;
         [HideInInspector]
         public bool vehicleIsGrounded;
+        private float reverseWaitTime; // Counts how long the car has stood still with the reverse input held
 
         private float[] offset_Prev = new float[4];
 
@@ -302,6 +310,21 @@ namespace Ashsvp
 
         void AddAcceleration(float accelerationInput)
         {
+            // The reverse waits out reverseDelay once the car has stopped, braking is not affected
+            if (accelerationInput < 0 && localVehicleVelocity.z <= 0f)
+            {
+                reverseWaitTime += Time.fixedDeltaTime;
+
+                if (reverseWaitTime < reverseDelay)
+                {
+                    return;
+                }
+            }
+            else
+            {
+                reverseWaitTime = 0f;
+            }
+
             // Calculate the angle between the vehicle's up axis and the world's up axis
             float angle = Vector3.Angle(transform.up, Vector3.up);
 
@@ -317,7 +340,7 @@ namespace Ashsvp
 
             if (adjustedAccelerationInput > 0 && localVehicleVelocity.z < 0 || adjustedAccelerationInput < 0 && localVehicleVelocity.z > 0)
             {
-                deltaSpeed = (1 + Mathf.Abs(localVehicleVelocity.z / MaxSpeed)) * Acceleration * adjustedAccelerationInput * Time.fixedDeltaTime;
+                deltaSpeed = (1 + Mathf.Abs(localVehicleVelocity.z / MaxSpeed)) * deceleration * adjustedAccelerationInput * Time.fixedDeltaTime;
             }
             if (handbrakeInput < 0.1f && Mathf.Abs(localVehicleVelocity.z) < MaxSpeed)
             {

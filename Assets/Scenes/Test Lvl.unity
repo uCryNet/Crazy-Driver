@@ -4226,7 +4226,7 @@ PrefabInstance:
       objectReference: {fileID: 423336022}
     - target: {fileID: 5535336530107445748, guid: 93f945d68b0fdf633877a9c54d3026cf, type: 3}
       propertyPath: MaxSpeed
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 6064497580736926435, guid: 93f945d68b0fdf633877a9c54d3026cf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22152,7 +22152,7 @@ PrefabInstance:
       objectReference: {fileID: 423336022}
     - target: {fileID: 5535336530107445748, guid: 93f945d68b0fdf633877a9c54d3026cf, type: 3}
       propertyPath: MaxSpeed
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 6064497580736926435, guid: 93f945d68b0fdf633877a9c54d3026cf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22665,7 +22665,7 @@ PrefabInstance:
       objectReference: {fileID: 423336022}
     - target: {fileID: 5246128059319770015, guid: e3ed482d0aacc7fbe995c2e67520b06a, type: 3}
       propertyPath: MaxSpeed
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22973,7 +22973,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 178872725853809126, guid: de6689aa4e6fb91f4b6a28dd12f05d83, type: 3}
       propertyPath: MaxSpeed
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2058784060646465160, guid: de6689aa4e6fb91f4b6a28dd12f05d83, type: 3}
       propertyPath: splineContainer
@@ -23243,7 +23243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5671547203241771045, guid: c425c6037f1a9dfb1bc610ef3b3439db, type: 3}
       propertyPath: MaxSpeed
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7132209653506244018, guid: c425c6037f1a9dfb1bc610ef3b3439db, type: 3}
       propertyPath: splineContainer
@@ -23533,7 +23533,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8563923262176837426, guid: a2092dade2686af8aa1545166b5d4443, type: 3}
       propertyPath: MaxSpeed
-      value: 70
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563923262176837426, guid: a2092dade2686af8aa1545166b5d4443, type: 3}
+      propertyPath: Deceleration
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563923262176837426, guid: a2092dade2686af8aa1545166b5d4443, type: 3}
+      propertyPath: ReverseDelay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563923262176837426, guid: a2092dade2686af8aa1545166b5d4443, type: 3}
+      propertyPath: brakeAcceleration
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23698,7 +23710,7 @@ PrefabInstance:
       objectReference: {fileID: 423336022}
     - target: {fileID: 4932040500114437762, guid: 59475b9ad73c10f369afdc4d72163fb0, type: 3}
       propertyPath: MaxSpeed
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 6972867969351203474, guid: 59475b9ad73c10f369afdc4d72163fb0, type: 3}
       propertyPath: m_Name
@@ -23844,7 +23856,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1558615511552957989, guid: 83c59506355d44fda8c92038b126f084, type: 3}
       propertyPath: MaxSpeed
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2211578964761224241, guid: 83c59506355d44fda8c92038b126f084, type: 3}
       propertyPath: m_Name
@@ -24023,7 +24035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4138422840200881636, guid: 7527cca996d674ad7ab255eaf16f998e, type: 3}
       propertyPath: MaxSpeed
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4873340287466917727, guid: 7527cca996d674ad7ab255eaf16f998e, type: 3}
       propertyPath: splineContainer
@@ -24108,7 +24120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4800591474308474594, guid: 99fa341d2688c4c92b762dd6949fab05, type: 3}
       propertyPath: MaxSpeed
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24177,7 +24189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7551386632297713620, guid: 099daf9937cc6f39c9bd3085119c2598, type: 3}
       propertyPath: MaxSpeed
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24199,7 +24211,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 18938397760338676, guid: 3573bcb66e7a5fbcfa901758764fabd3, type: 3}
       propertyPath: MaxSpeed
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 253377908108105100, guid: 3573bcb66e7a5fbcfa901758764fabd3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24473,7 +24485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6574579354645800655, guid: a0f2eeea1be9f8bc29513e638585d33b, type: 3}
       propertyPath: MaxSpeed
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8079205939762335966, guid: a0f2eeea1be9f8bc29513e638585d33b, type: 3}
       propertyPath: m_Name
@@ -25484,7 +25496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4683402508188610400, guid: e6223de425a2e49d7a3a42a86ae60ed9, type: 3}
       propertyPath: MaxSpeed
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
