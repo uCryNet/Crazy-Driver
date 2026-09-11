@@ -10,7 +10,7 @@ public class KillZoneDetector : MonoBehaviour
     {
         if (other.CompareTag(KillZoneTag))
         {
-            gameManager.LooseLevel();
+            gameManager.KillPlayer();
         }
     }
 }

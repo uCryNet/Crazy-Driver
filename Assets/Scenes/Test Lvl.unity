@@ -4839,10 +4839,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   player: {fileID: 4867872302481757857}
-  vehicle: {fileID: 4867872302481757865}
   info: {fileID: 1437303839}
   timer: {fileID: 1589418435}
-  timeLimit: 20
+  timeLimit: 17
 --- !u!1 &1939852593
 GameObject:
   m_ObjectHideFlags: 0
@@ -22669,6 +22668,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5493867805178437006, guid: 6be6806674fd09c7e90e04bed7daf9b6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5655980444676779760, guid: 6be6806674fd09c7e90e04bed7daf9b6, type: 3}
       propertyPath: m_Name
       value: World
@@ -23510,17 +23513,6 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 2845179168112749316, guid: a2092dade2686af8aa1545166b5d4443, type: 3}
   m_PrefabInstance: {fileID: 4867872302481757855}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4867872302481757865 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8563923262176837426, guid: a2092dade2686af8aa1545166b5d4443, type: 3}
-  m_PrefabInstance: {fileID: 4867872302481757855}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716713912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 228805c2cfb68164680169bec503f811, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4867872302481757873
 MonoBehaviour:
   m_ObjectHideFlags: 0
