@@ -8,16 +8,14 @@ namespace OmniVehicleAi
 {
     public class PathProgressTracker : MonoBehaviour
     {
+        [Header("Custom fields")]
+        [Space(10)]
+        [Tooltip("Find the closest point on the spline in world space when progress is reset")]
+        public bool accurateStartPoint = true;
+        [Space(10)]
+        
         public AIVehicleController aiVehicleController;
         public SplineContainer splineContainer; // The spline container holding the spline
-
-        [Header("Start Point")]
-        [Tooltip("Find the closest point on the spline in world space when progress is reset.\n\n" +
-                 "Off = original behaviour: the search compares the world space vehicle position against " +
-                 "the spline's local space knots, so a Spline Container that is not at the origin makes the " +
-                 "vehicle start from a wrong point (often near the beginning of the spline) and steer " +
-                 "towards it for the first frames.")]
-        public bool accurateStartPoint = true;
 
         [Header("Offsets")]
         public float offset_A = 15f;
